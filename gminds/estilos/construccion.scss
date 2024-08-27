@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url(../img/construccion.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+.contenedor {  
+    color: #010101;
+    font-family: "Inter";
+    margin: auto;        
+    padding-top: 15%;
+
+    .encabezado {        
+        font-size: 100px;
+        font-weight: 500;
+        text-align: center;        
+    }
+
+    .bajada {
+        margin-top: 30px;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .leyenda {
+        font-size: 15px;
+        text-align: center;
+        position: fixed;
+        bottom: 80px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: 100%;
+    }
+    .contenedor {
+        .encabezado {
+            font-size: 50px;
+        }
+
+        .bajada {
+            font-size: 20px;
+        }
+
+        .leyenda {
+            font-size: 11px;
+        }
+    }
+}
