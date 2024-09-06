@@ -24,51 +24,129 @@ main {
         align-items: center;
 
         .logo {
-            margin-right: 25px;
-        }
+            margin-right: 45px;
+        }       
 
         ul {
             list-style: none;
             display: flex;
-            gap: 45px;
-
-            li {
-                font-size: 26px;
-
-                a {
-                    color: #FAFAFA;
-                    text-decoration: none;
-                    cursor: pointer;
-                }
-
-                a:hover {
-                    font-weight: 700;
-                    
-                }
-            }
+            gap: 25px;
+            padding: 0;
         }
 
-        .country {
-            margin-left: 120px;
-
-            select {
-                background-color: transparent;
-                border: none;
-                color: #FAFAFA;
-                font-size: 26px;
-
-                option {
-                    color: #373737;
-                    border: none;
-                }
-            }
-
-            select:focus-visible {
-                outline: 0;
-            }
+        ul li {
+            font-size: 26px;
+            text-wrap: nowrap;
+            max-width: 200px;
         }
+
+        ul li a {
+            color: #FAFAFA;
+            text-decoration: none;
+            cursor: pointer;
+            padding: 5px 10px; 
+            min-width: 120px; 
+            max-width: 230px;
+            text-align: center;
+            display: inline-block;
+            transition: font-weight 0.3s ease;
+        }
+
+        ul li:nth-child(3) {
+            margin-left: -40px;
+            margin-right: -40px;
+        }
+
+        ul li:nth-child(4) {
+            max-width: 260px;
+            display: flex; 
+            justify-content: center;
+            margin-right: -15px;
+        }
+
+        ul li:nth-child(4) a {
+            min-width: 260px; 
+        }
+
+        ul li a:hover {
+            font-weight: 700;
+        }   
+
+        .country-select {
+            position: relative;
+            width: fit-content;
+            cursor: pointer;
+            margin-left: 60px;
+        }
+        
+        .country-select .selected {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #104DE5;
+            color: #FAFAFA;
+            padding: 10px;
+            font-size: 26px;
+        }
+
+        .country-select .selected:hover {
+            background-color: #124CDE;
+        }
+        
+        .country-select .selected img {
+            width: 58px;
+        }
+
+        .country-select .selected .dropdown {
+            width: 20px;
+            margin-left: 8px;
+            margin-top: 5px;
+            border: none;
+        }
+        
+        .country-select .options {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0px;
+            width: 158px;
+            background-color: #FAFAFA;
+            border: 1px solid #EAEAEA;
+            max-height: 150px;
+            overflow-y: visible;
+            z-index: 1000;
+            margin: 0;
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+        }
+        
+        .country-select .options li {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            color: #373737;
+            width: 100%;
+            font-size: 26px;
+            font-weight: 600;
+            box-sizing: border-box;
+        }
+        
+        .country-select .options li:hover {
+            background-color: #DBDBDB;
+        }
+        
+        .country-select .options li img {
+            width: 58px;
+            margin-right: 10px;
+        }
+        .country-select .options li img.dropdown {
+            display: none;
+        }
+        
     }
-    
 }
 
 .quienes-somos {
@@ -82,12 +160,12 @@ main {
         width: fit-content;
         text-align: center;
         font-weight: 700;
-        font-size: 54px;
-        padding-top: 210px;
+        padding-top: 185px;
 
         h1 {
             margin: 0;
             line-height: .9;
+            font-size: 54px;
         }
     }
 
@@ -95,7 +173,7 @@ main {
         margin: auto;
         width: fit-content;
         font-size: 26px;
-        margin-top: 20px;
+        margin-top: 30px;
         text-align: center;
     }
 }
@@ -133,6 +211,7 @@ main {
             padding: 20px 10px;
             margin-bottom: 50px;
             text-wrap: wrap;
+            font-weight: 600;
         }
     }
 
@@ -191,13 +270,14 @@ main {
     .grid-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
+        gap: 50px 20px;
         margin: auto;
         background-image: url(../img/bg-grid-servicios.png);
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        padding-left: 75px;
+        padding: 0px 70px;
+        
     }
     
     .grid-item {        
@@ -208,19 +288,72 @@ main {
         display: flex;
         flex-direction: column;
         text-wrap: nowrap;
+        cursor: default;
         
         span {
-            padding: 5px;
+            padding: 0px 5px;
             background-color: #373737;
             display: inline-block;  /* Asegura que el fondo se ajuste al contenido */
             max-width: fit-content;  /* Evita que el contenido desborde */
             word-wrap: break-word;  /* Asegura que las palabras largas se ajusten al ancho */              
         }
     }
+    .full-stack-description,
+    .soporte-sap-description,
+    .sap-basis-description,
+    .factory-abap-description,
+    .consultoria-sap-description,
+    .sap-cloud-description,
+    .sap-security-description,
+    .capacitacion-description,
+    .ciberseguridad-description,
+    .consultoria-description,
+    .sap-solution-description {
+        display: none;
+        color: #373737;
+        text-wrap: wrap;
+        font-size: 15px;
+        padding: 10px 10px 5px 0px;
+    }
+
+    .consultoria-description {
+        text-wrap: balance;
+    }
+
+    .full-stack:hover span,    
+    .soporte-sap:hover span,
+    .sap-basis:hover span,
+    .factory-abap:hover span,
+    .consultoria-sap:hover span,
+    .sap-cloud:hover span,
+    .sap-security:hover span,
+    .capacitacion:hover span,
+    .ciberseguridad:hover span,
+    .consultoria:hover span,
+    .sap-solution:hover span{
+        background-color: #104DE5;
+    }
+
+    .full-stack:hover .full-stack-description,
+    .soporte-sap:hover .soporte-sap-description,
+    .sap-basis:hover .sap-basis-description,
+    .factory-abap:hover .factory-abap-description,
+    .consultoria-sap:hover .consultoria-sap-description,
+    .sap-cloud:hover .sap-cloud-description,
+    .sap-security:hover .sap-security-description,
+    .capacitacion:hover .capacitacion-description,
+    .ciberseguridad:hover .ciberseguridad-description,
+    .consultoria:hover .consultoria-description,
+    .sap-solution:hover .sap-solution-description {
+        display: block;        
+    }
     
     /* Fila 3: El segundo elemento ocupa 2 columnas */
     .wide-item {
         grid-column: span 2;
+        position: relative;
+        left: 25%;
+        width: fit-content;
     }    
 }
 
@@ -231,9 +364,11 @@ main {
         display: flex;
         margin: auto;
         gap: 20px;
-        padding: 20px 75px;
+        padding: 20px 75px 0px;
         justify-content: center;
         align-items: flex-end;
+        position: relative;
+        top: 5px;
 
         .member {
             display: flex;
@@ -267,40 +402,291 @@ main {
     }
 }
 
+.clientes {
+    background-color: #010101;
+    margin-top: -70px;
+    padding: 100px;
+
+    .paragraph {
+        font-size: 26px;
+        color: #FAFAFA;
+        margin: auto;
+        text-align: center;
+        max-width: 700px;
+        padding: 20px;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    .slider {
+        position: relative;
+        width: 100%;                
+        overflow: hidden;
+        margin-top: 80px;
+        
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+
+            .slide {
+                min-width: 100%;
+                height: 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-size: cover;
+                background-position: center;
+            }
+            
+            .icons {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+    
+            .icons .icon {
+                width: 160px;
+                height: 160px;
+                margin: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+            }
+
+            
+        }
+        .dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;            
+        }
+
+        .dot {
+            width: 15px;
+            height: 15px;
+            margin: 0 5px;
+            background-color: #949494;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #104DE5;
+            width: 30px;
+            border-radius: 50px;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 35%;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            user-select: none;
+            background-image: url(../img/arrow.png);
+            background-size: contain;
+            z-index: 999;
+        }
+        
+        .arrow.left {
+            left: 10px;
+            transform: rotate(180deg);
+        }
+
+        .arrow.right {
+            right: 10px;
+        }
+
+        .arrow:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    }
+
+    
+}
+
+.bg-slide-1,
+.bg-slide-2 {
+    background-image: url(../img/bg-slider-1.png);
+    height: 80px;
+    width: 100%;
+    background-size: contain;
+    background-color: #010101;
+    position: relative;
+    top: -50px;
+    margin-bottom: -50px;
+} 
+
+.bg-slide-2 {
+    background-image: url(../img/bg-slider-2.png);
+    background-size: cover;
+}
+
 .locations {
     background-color: #010101;
 
     .argentina {
         position: relative;
-        width: 10px;
-        height: 10px;
-        background-color: red;
-        border-radius: 50%;
-        top: -225px;
-        left: 440px;
-        z-index: 999;
+        width: 26px;
+        height: 24px;
+        background-image: url(../img/icono-pais.png);
+        top: -230px;
+        left: 435px;
+        z-index: 9999;
+    }
+    .argentina-description {
+        display: none;
+    }
+    .argentina:hover .argentina-description {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+
+        .pais {
+            display: flex;
+            background-color: #FAFAFA;
+            color: #373737;
+            align-items: center;
+            font-size: 35px;
+            font-weight: 600;
+            position: relative;
+            left: 25px;
+            padding-right: 10px;
+            width: fit-content;
+
+            img {
+                width: 75px;
+                height: 40px;
+            }
+        }
+
+        .since {
+            font-size: 25px;
+            color: #FAFAFA;
+            background-color: #104DE5;
+            text-wrap: nowrap;
+            font-weight: 700;
+            padding: 5px 10px;
+            text-align: center;
+            position: relative;
+            left: 25px;
+        }
     }
 
     .chile {
         position: relative;
-        width: 10px;
-        height: 10px;
-        background-color: red;
-        border-radius: 50%;
-        top: -220px;
-        left: 400px;
+        width: 26px;
+        height: 24px;
+        background-image: url(../img/icono-pais.png);
+        top: -240px;
+        left: 395px;
         z-index: 999;
+    }
+    
+    .chile-description {
+        display: none;
+    }
+
+    .chile:hover .chile-description {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+
+        .pais {
+            display: flex;
+            background-color: #FAFAFA;
+            color: #373737;
+            align-items: center;
+            font-size: 35px;
+            font-weight: 600;
+            position: relative;
+            left: -135px;
+            top: -18px;
+            padding-right: 10px;
+            width: fit-content;
+
+            img {
+                width: 75px;
+                height: 40px;
+            }
+        }
+
+        .since {
+            font-size: 25px;
+            color: #FAFAFA;
+            background-color: #104DE5;
+            text-wrap: nowrap;
+            font-weight: 700;
+            padding: 5px 10px;
+            text-align: center;
+            position: relative;
+            left: -237px;
+            top: -18px;
+        }
     }
 
     .colombia {
         position: relative;
-        width: 10px;
-        height: 10px;
-        background-color: red;
-        border-radius: 50%;
-        top: -315px;
-        left: 410px;
+        width: 26px;
+        height: 24px;
+        background-image: url(../img/icono-pais.png);
+        top: -345px;
+        left: 400px;
         z-index: 999;
+    }
+    .colombia-description {
+        display: none;
+    }
+
+    .colombia:hover .colombia-description {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+
+        .pais {
+            display: flex;
+            background-color: #FAFAFA;
+            color: #373737;
+            align-items: center;
+            font-size: 35px;
+            font-weight: 600;
+            position: relative;
+            left: 27px;
+            top: -50px;
+            padding-right: 10px;
+            width: fit-content;
+
+            img {
+                width: 75px;
+                height: 40px;
+            }
+        }
+
+        .since {
+            font-size: 25px;
+            color: #FAFAFA;
+            background-color: #104DE5;
+            text-wrap: nowrap;
+            font-weight: 700;
+            padding: 5px 10px;
+            text-align: center;
+            position: relative;
+            left: 26px;
+            top: -50px;
+        }
     }
 }
 
@@ -310,7 +696,7 @@ main {
     
     .container {
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         padding: 50px;
 
@@ -349,6 +735,46 @@ main {
                     gap: 23px;
                     font-size: 22px; 
                     margin-top: 45px;                  
+                }
+            }
+        }
+
+        .formulario {
+
+            form {
+
+                .form-container {
+                    display: flex;
+                    flex-direction: column;
+
+                    .fila {
+                        border-bottom: 1px dashed #FAFAFA;
+                        margin-top: 55px;
+
+                        input {
+                            border: none;
+                            font-size: 26px;
+                            font-family: "Inter";
+                            background-color: transparent;
+                            letter-spacing: 1.5px;
+                            position: relative;
+                            top: -20px;
+                            color: #595959;
+                        }
+
+                        input.button {
+                            background-color: #FAFAFA;
+                            border-radius: 75px;
+                            font-size: 21px;
+                            color: #010101;
+                            letter-spacing: 0px;
+                            width: 135px;
+                            height: 46px;
+                            text-align: center;
+                            position: relative;
+                            left: 200px;
+                        }
+                    }
                 }
             }
         }

@@ -25,13 +25,22 @@
                         <li><a href="#">Clientes y partners</a></li>
                         <li><a href="#">Contacto</a></li>
                     </ul>
-                    <div class="country">
-                        <select name="pais">
-                            <option value="arg" selected><img src="./img/flag-argentina.png" alt="Argentina">ARG</option>
-                            <option value="col"><img src="./img/flag-colombia.png" alt="Colombia">COL</option>
-                            <option value="ch"><img src="./img/flag-chile.png" alt="Chile">CH</option>
-                        </select>
-                    </div>
+                    <div class="country-select">
+                        <div class="selected">
+                            <img src="./img/flag-argentina.png" alt="Argentina"> ARG <img class="dropdown" src="./img/flecha-dropdown.png">
+                        </div>
+                        <ul class="options">
+                            <li data-value="arg" data-url="#">
+                                <img src="./img/flag-argentina.png" alt="Argentina"> ARG <img class="dropdown" src="./img/flecha-dropdown.png">
+                            </li>
+                            <li data-value="col" data-url="#">
+                                <img src="./img/flag-colombia.png" alt="Colombia"> COL <img class="dropdown" src="./img/flecha-dropdown.png">
+                            </li>
+                            <li data-value="ch" data-url="#">
+                                <img src="./img/flag-chile.png" alt="Chile"> CH <img class="dropdown" src="./img/flecha-dropdown.png">
+                            </li>
+                        </ul>
+                    </div>                    
                 </div>
             </section>
             <section class="quienes-somos">
@@ -52,21 +61,62 @@
                 <div class="service-description">Brindamos servicios diferenciales de soluciones SAP y No-SAP. Consultoría, tecnología y<br> outsorcing de primer nivel.</div>
                 <div class="grid-container">
                     <!-- Fila 1 -->
-                    <div class="grid-item"><span>FULL STACK</span><span>TEAM</span></div>
-                    <div class="grid-item"><span>SOPORTE SAP</span><span>AMS</span></div>
-                    <div class="grid-item"><span>SAP BASIS</span></div>
-                    <div class="grid-item"><span>FACTORY ABAP</span><span>+ FIORI + BTP</span></div>
+                    <div class="grid-item full-stack">
+                        <span>FULL STACK</span>
+                        <span>TEAM</span>
+                        <div class="full-stack-description">Desde la concepción de un desarrollo, app o integración, hasta su implementación y soporte será el compromiso de nuestro equipo. En todo momento con nuestros clientes.</div>
+                    </div>
+                    <div class="grid-item soporte-sap">
+                        <span>SOPORTE SAP</span>
+                        <span>AMS</span>
+                        <div class="soporte-sap-description">Realice el mantenimiento de sus aplicaciones con nuestro equipo AMS. Experimente la calidad de un equipo integrado y altamente capacitado.</div>
+                    </div>
+                    <div class="grid-item sap-basis">
+                        <span>SAP BASIS</span>
+                        <div class="sap-basis-description">Opere, monitoree y actualice sus sistemas SAP con nuestros servicios Basis especializados.</div>
+                    </div>
+                    <div class="grid-item factory-abap">
+                        <span>FACTORY ABAP</span>
+                        <span>+ FIORI + BTP</span>
+                        <div class="factory-abap-description">Lleve sus desarrollos, ampliaciones, integraciones y mejoras al próximo nivel.</div>
+                    </div>
             
                     <!-- Fila 2 -->
-                    <div class="grid-item"><span>CONSULTORÍA SAP</span><span>PI PO & CPI</span></div>
-                    <div class="grid-item"><span>SAP CLOUD</span><span>ALM</span></div>
-                    <div class="grid-item"><span>SAP SECURITY</span><span>& SAP GRC</span></div>
-                    <div class="grid-item"><span>CAPACITACIÓN</span></div>
+                    <div class="grid-item consultoria-sap">
+                        <span>CONSULTORÍA SAP</span>
+                        <span>PI PO & CPI</span>
+                        <div class="consultoria-sap-description">Gestiones todas las integraciones con nuestros servicios y especialistas.</div>
+                    </div>
+                    <div class="grid-item sap-cloud">
+                        <span>SAP CLOUD</span>
+                        <span>ALM</span>
+                        <div class="sap-cloud-description">Gestione y Opere sus soluciones Cloud con la plataforma de servicios más potente para sus sistemas SAP.</div>
+                    </div>
+                    <div class="grid-item sap-security">
+                        <span>SAP SECURITY</span>
+                        <span>& SAP GRC</span>
+                        <div class="sap-security-description">Aumente la efectividad de su seguridad y potencie su GRC con nuestros</div>
+                    </div>
+                    <div class="grid-item capacitacion">
+                        <span>CAPACITACIÓN</span>
+                        <div class="capacitacion-description">Si su empresa necesita capacitación a medida, nuestros equipos realizan el armado de temarios, material, cronograma, dictado de cursos.</div>
+                    </div>
             
                     <!-- Fila 3 -->
-                    <div class="grid-item"><span>CIBERSEGURIDAD</span></div>
-                    <div class="grid-item wide-item"><span>CONSULTORÍA</span><span>FUNCIONAL SAP </span></div>
-                    <div class="grid-item"><span>SAP SOLUTION MANAGER</span><span>& FOCUSED SOLUTIONS</span></div>
+                    <div class="grid-item ciberseguridad">
+                        <span>CIBERSEGURIDAD</span>
+                        <div class="ciberseguridad-description">Amplíe sus fronteras en la seguridad y extienda la misma a todos sus niveles. Desde la concientización, desarrollo y aplicación de los niveles de seguridad están a su disposición.</div>
+                    </div>
+                    <div class="grid-item wide-item consultoria">
+                        <span>CONSULTORÍA</span>
+                        <span>FUNCIONAL SAP</span>
+                        <div class="consultoria-description">Implemente y optimice sus aplicaciones funcionales de la mano de nuestros consultores especializados.</div>
+                    </div>
+                    <div class="grid-item sap-solution">
+                        <span>SAP SOLUTION MANAGER</span>
+                        <span>& FOCUSED SOLUTIONS</span>
+                        <div class="sap-solution-description">Gestione el ciclo de vida de sus aplicaciones On Premis e híbridas con la plataforma de servicios más robusta</div>
+                    </div>
                 </div>
             </section>
             <section class="staff">
@@ -102,12 +152,82 @@
                 </div>
                 <div class="bg-staff"></div>
             </section>
-            <section class="clientes"></section>
+            <section class="clientes">
+                <div class="paragraph">Ellos son algunos de los que <span>confían en nuestra propuesta</span> y con quienes superamos día a día nuevos desafíos.</div>
+                <div class="paragraph">Quienes nos suman para, conjuntamente, llevar valor agregado a sus proyectos.</div>
+                <div class="slider">
+                    <div class="arrow left"></div>
+                    <div class="slides">
+                        <!-- First Slide -->
+                        <div class="slide">
+                            <div class="icons">
+                                <div class="icon"><a href="https://www.molinos.com.ar/" target="_blank"><img src="./img/cli-molinos.png" alt="Molinos"></a></div>
+                                <div class="icon"><a href="https://www.delsud.com.ar/" target="_blank"><img src="./img/cli-droguerias.png" alt="Droguerías del sud"></a></div>
+                                <div class="icon"><a href="https://www.aeropuertosargentina.com/" target="_blank"><img src="./img/cli-aeropuertos.png" alt="Aeropuertos 2000"></a></div>
+                                <div class="icon"><a href="https://www.irsa.com.ar/" target="_blank"><img src="./img/cli-irsa.png" alt="Irsa"></a></div>
+                                <div class="icon"><a href="https://qactions.com/" target="_blank"><img src="./img/cli-qactions.png" alt="QActions Group"></a></div>
+                            </div>
+                            <div class="icons">
+                                <div class="icon"><a href="https://www.energia-argentina.com.ar/" target="_blank"><img src="./img/cli-ieasa.png" alt="Ieasa"></a></div>
+                                <div class="icon"><a href="https://21.edu.ar/" target="_blank"><img src="./img/cli-siglo21.png" alt="Universidad Siglo 21"></a></div>
+                                <div class="icon"><a href="https://www.tgv.com.ar/" target="_blank"><img src="./img/cli-tgv.png" alt="TGV"></a></div>
+                                <div class="icon"><a href="https://beteknik.net/web/esp/nosotros/" target="_blank"><img src="./img/cli-beteknik.png" alt="BeTeknik"></a></div>
+                                <div class="icon"><a href="https://www.grupodatco.com/" target="_blank"><img src="./img/cli-datco.png" alt="Grupo DATCO"></a></div>
+                            </div>
+                            
+                        </div>
+                        <!-- Second Slide -->
+                        <div class="slide">
+                            <div class="icons">
+                                <div class="icon"><a href="https://www.softtek.com/es/" target="_blank"><img src="./img/par-softtek.png" alt="Softtek"></a></div>
+                                <div class="icon"><a href="https://imrconsulting.com/#!/-bienvenido/" target="_blank"><img src="./img/par-imr.png" alt="IMR & Asociados"></a></div>
+                                <div class="icon"><a href="https://epiuse.lat/" target="_blank"><img src="./img/par-epiuse.png" alt="EPI USE"></a></div>
+                                <div class="icon"><a href="https://www.groupitmind.com/" target="_blank"><img src="./img/par-mind.png" alt="Group It Mind"></a></div>
+                            </div>
+                            <div class="icons">
+                                <div class="icon"><a href="https://www.softminers.com/" target="_blank"><img src="./img/par-sm.png" alt="Soft Miners"></a></div>
+                                <div class="icon"><a href="https://zgenmind.com/es/home-espana/" target="_blank"><img src="./img/par-zgen.png" alt="ZGEN Mind"></a></div>
+                                <div class="icon"><a href="https://dlconsultores.com.ar/" target="_blank"><img src="./img/par-dl.png" alt="DL Consultores"></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arrow right"></div>
+                    <div class="dots">
+                        <div class="dot active" onclick="currentSlide(0)"></div>
+                        <div class="dot" onclick="currentSlide(1)"></div>
+                    </div>                    
+                </div>                
+            </section>
+            <div class="bg-slide bg-slide-1"></div><!--Background zócalo del slider de clientes-->
             <section class="locations">
                 <img src="./img/mundo.png" alt="Mapa del mundo" class="imagen-mundo"> 
-                <div class="argentina"></div>
-                <div class="chile"></div>
-                <div class="colombia"></div>
+                <div class="argentina">
+                    <div class="argentina-description">
+                        <span class="pais">
+                            <img src="./img/flag-argentina-location.png" alt="Argentina">
+                            <span>ARG</span>
+                        </span>
+                        <span class="since">Desde el año 2008</span>
+                    </div>
+                </div>
+                <div class="chile">
+                    <div class="chile-description">
+                        <span class="pais">
+                            <img src="./img/flag-chile-location.png" alt="Chile">
+                            <span>CH</span>
+                        </span>
+                        <span class="since">Desde el año 2022</span>
+                    </div>
+                </div>
+                <div class="colombia">
+                    <div class="colombia-description">
+                        <span class="pais">
+                            <img src="./img/flag-colombia-location.png" alt="Colombia">
+                            <span>COL</span>
+                        </span>
+                        <span class="since">Desde el año 2022</span>
+                    </div>
+                </div>
             </section>
             <section class="contacto">
                 <div class="container">
@@ -129,15 +249,108 @@
                         </div>
                     </div>
                     <div class="formulario">
-
+                        <form action="email.php" method="post">
+                            <div class="form-container">                                                       
+                                <div class="fila">
+                                    <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                                    <input type="text" id="email" name="email" placeholder="Email">
+                                </div>
+                                <div class="fila">
+                                    <input type="text" id="telefono" name="telefono" placeholder="Teléfono">
+                                    <input type="text" id="empresa" name="empresa" placeholder="Empresa">
+                                </div>
+                                <div class="fila">
+                                    <input type="text" id="consulta" name="consulta" placeholder="Consulta">
+                                    <input type="Submit" value="Enviar" class="success button">
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </section>
             <section class="footer">
                 <div class="logo"><img src="./img/logo-gminds-footer.png" alt="G-MINDS"></div>
                 <div class="texto">© G-MINDS 2024 / Todos los derechos reservados.</div>
-                <div class="redes">Encontranos en <a href="#"><img src="./img/logo-linkedin.png" alt="LinkedIn"></a></div>
+                <div class="redes">Encontranos en <a href="https://ar.linkedin.com/company/g-minds" target="_blank"><img src="./img/logo-linkedin.png" alt="LinkedIn"></a></div>
             </section>
         </main>
+        <script>/*Dropdown menu paises*/
+            document.querySelector('.country-select .selected').addEventListener('click', function() {
+                const optionsMenu = document.querySelector('.country-select .options');
+                optionsMenu.style.display = optionsMenu.style.display === 'none' || optionsMenu.style.display === '' ? 'flex' : 'none';
+            });
+            document.querySelectorAll('.country-select .options li').forEach(option => {
+                option.addEventListener('click', function() {
+                    const selected = document.querySelector('.country-select .selected');
+                    selected.innerHTML = this.innerHTML;
+                    document.querySelector('.country-select .options').style.display = 'none';
+                    window.location.href = this.getAttribute('data-url');
+                });
+            });
+        </script>
+        
+        <script>
+            /* Slider Clientes y Partners */
+            let currentSlideIndex = 0;
+        
+            function moveSlide(step) {
+                const slides = document.querySelector('.slides');
+                const dots = document.querySelectorAll('.dot');
+                const totalSlides = document.querySelectorAll('.slide').length;
+                console.log(totalSlides)
+                const bgslide = document.querySelector('.bg-slide');
+        
+                currentSlideIndex += step;
+                console.log(currentSlideIndex)
+                if (currentSlideIndex < 0) {
+                    currentSlideIndex = totalSlides - 1; // Loop back to the last slide
+                } else if (currentSlideIndex >= totalSlides) {
+                    currentSlideIndex = 0; // Loop back to the first slide
+                }
+        
+                if (currentSlideIndex === 0) {
+                    bgslide.classList.add('bg-slide-1');
+                    bgslide.classList.remove('bg-slide-2');
+                }
+        
+                if (currentSlideIndex === 1) {
+                    bgslide.classList.add('bg-slide-2');
+                    bgslide.classList.remove('bg-slide-1');
+                }
+        
+                slides.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+        
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots[currentSlideIndex].classList.add('active');
+            }
+        
+            function currentSlide(index) {
+                const slides = document.querySelector('.slides');
+                const dots = document.querySelectorAll('.dot');
+                const bgslide = document.querySelector('.bg-slide');
+        
+                if (index === 0) {
+                    bgslide.classList.add('bg-slide-1');
+                    bgslide.classList.remove('bg-slide-2');
+                }
+        
+                if (index === 1) {
+                    bgslide.classList.add('bg-slide-2');
+                    bgslide.classList.remove('bg-slide-1');
+                }
+        
+                slides.style.transform = `translateX(-${index * 100}%)`;
+        
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots[index].classList.add('active');
+        
+                currentSlideIndex = index;
+            }
+        
+            // Event listeners for arrows
+            document.querySelector('.arrow.left').addEventListener('click', () => moveSlide(-1));
+            document.querySelector('.arrow.right').addEventListener('click', () => moveSlide(1));
+        </script>
+        
     </body>
 </html>
