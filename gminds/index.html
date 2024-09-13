@@ -15,17 +15,23 @@
     </head>
     <body>
         <main>
-            <section class="navbar">
+            <section id="navbar" class="navbar">
                 <div class="container">
                     <div class="logo"><img src="./img/logo-navbar.png" alt="Logo G-Minds"></div>
-                    <ul>
-                        <li><a href="#">Quiénes somos</a></li>
-                        <li><a href="#">Servicios</a></li>
-                        <li><a href="#">Staff</a></li>
-                        <li><a href="#">Clientes y partners</a></li>
-                        <li><a href="#">Contacto</a></li>
+                    <div class="hamburguer hidden-dk">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <ul class="hidden-mb">
+                        <li><a href="#quienes-somos">Quiénes somos</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#staff">Staff</a></li>
+                        <li><a href="#clientes">Clientes y partners</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
                     </ul>
-                    <div class="country-select">
+                    <div class="country-select hidden-mb">
                         <div class="selected">
                             <img src="./img/flag-argentina.png" alt="Argentina"> ARG <img class="dropdown" src="./img/flecha-dropdown.png">
                         </div>
@@ -43,11 +49,11 @@
                     </div>                    
                 </div>
             </section>
-            <section class="quienes-somos">
+            <section id="quienes-somos" class="quienes-somos">
                 <div class="encabezado"><h1>G-MINDS continúa <br>generando valor</h1></div>
                 <div class="bajada">Creciendo junto a vos, brindando soluciones <br> de calidad y generando nuevos servicios para <br>satisfacer las necesidades de tu empresa.</div>
             </section>
-            <section class="servicios">
+            <section id="servicios" class="servicios">
                 <div class="container-1">
                     <div class="content-left">
                         <div class="paragraph">En <span class="azul">G-Minds</span> brindamos <span class="underline"> *servicios</span> SAP desde el año 2008.</div>
@@ -119,7 +125,7 @@
                     </div>
                 </div>
             </section>
-            <section class="staff">
+            <section id="staff" class="staff">
                 <div class="container">
                     <div class="member">
                         <img src="./img/aldo_ortiz.png" alt="Aldo Ortiz">
@@ -152,7 +158,7 @@
                 </div>
                 <div class="bg-staff"></div>
             </section>
-            <section class="clientes">
+            <section id="clientes" class="clientes">
                 <div class="paragraph">Ellos son algunos de los que <span>confían en nuestra propuesta</span> y con quienes superamos día a día nuevos desafíos.</div>
                 <div class="paragraph">Quienes nos suman para, conjuntamente, llevar valor agregado a sus proyectos.</div>
                 <div class="slider">
@@ -229,7 +235,7 @@
                     </div>
                 </div>
             </section>
-            <section class="contacto">
+            <section id="contacto" class="contacto">
                 <div class="container">
                     <div class="info-contacto">
                         <div class="title">CONTACTANOS</div>
@@ -238,8 +244,8 @@
                             <div class="mail">
                                 <img src="./img/icono-mail.png" alt="Ícono correo electrónico"/>
                                 <div>
-                                    <div>info@g-minds.com.ar</div>
-                                    <div>administracion@g-minds.com.ar</div>
+                                    <div class="mail-direction"><a href="mailto:info@g-minds.com.ar" target="_blank">info@g-minds.com.ar</a></div>
+                                    <div class="mail-direction"><a href="mailto:administracion@g-minds.com.ar" target="_blank">administracion@g-minds.com.ar</a></div>
                                 </div>
                             </div>
                             <div class="ubicacion">
@@ -272,7 +278,9 @@
                 <div class="logo"><img src="./img/logo-gminds-footer.png" alt="G-MINDS"></div>
                 <div class="texto">© G-MINDS 2024 / Todos los derechos reservados.</div>
                 <div class="redes">Encontranos en <a href="https://ar.linkedin.com/company/g-minds" target="_blank"><img src="./img/logo-linkedin.png" alt="LinkedIn"></a></div>
+                <div class="navigation-top"><a href="#navbar"><img src="./img/navigation-top.png" alt="Volver a arriba"></a></div>
             </section>
+            
         </main>
         <script>/*Dropdown menu paises*/
             document.querySelector('.country-select .selected').addEventListener('click', function() {
