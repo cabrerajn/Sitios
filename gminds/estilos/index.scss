@@ -15,7 +15,7 @@ main {
     display: none;
 }
 
-@media (max-width: 986px) {
+@media (max-width: 768px) {
     main {
         max-width: 100%;
     }    
@@ -163,7 +163,7 @@ main {
     }
 }
 
-@media (max-width: 986px) {
+@media (max-width: 768px) {
 
     .navbar {
 
@@ -227,13 +227,15 @@ main {
     }
 }
 
-@media (max-width: 986px) {
+@media (max-width: 768px) {
     .quienes-somos {
         background-image: url(../img/bg-quienes-somos-mb.png);
         background-position: top;
-        height: 750px;
+        height: 600px;
+        background-size: 100%;
 
         .encabezado {
+            padding-top: 250px;
 
             h1 {
                 font-size: 30px;
@@ -425,6 +427,105 @@ main {
     }    
 }
 
+@media (max-width: 768px) {
+    .servicios {
+        
+        .container-1 {
+            flex-direction: column;
+
+            .content-left{
+                padding: 20px;
+
+                .paragraph {
+                    font-size: 28px;
+                    text-align: center;
+                    text-wrap: pretty;
+                    font-weight: 600;
+
+                    .underline {
+                        border-bottom: 1.5px solid;
+                        margin-right: 5px;
+                        
+                    }
+                }
+
+                .aclaracion {
+                    font-size: 15px;
+                    text-align: center;
+                    margin-bottom: 0;
+                }
+
+            }
+
+            .content-right {
+                margin-left: 15%;
+                flex: none;
+                height: 450px;
+
+                .texto-main {
+                    font-size: 15px;
+                    max-width: 240px;
+                    left: -30px;
+                    top: 60px;
+                    padding: 30px 20px;
+                }
+
+                .pie-texto {
+                    font-size: 15px;
+                    top: 35px;
+                    left: -40px;
+                    max-width: 240px;
+                    padding: 10px 5px;
+                }
+            }
+        }
+
+        .service-description {
+            font-size: 15px;
+            border: none;
+            padding-bottom: 0px;
+        }
+
+        .grid-container {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px 60px;
+            background-position: center 225px;
+            padding: 0px 40px;
+        }
+
+        .grid-item {
+            font-size: 12px;
+            font-weight: 700;
+            height: 70px;
+        }
+
+        .full-stack-description,
+        .soporte-sap-description,
+        .sap-basis-description,
+        .factory-abap-description,
+        .consultoria-sap-description,
+        .sap-cloud-description,
+        .sap-security-description,
+        .capacitacion-description,
+        .ciberseguridad-description,
+        .consultoria-description,
+        .sap-solution-description {
+            font-size: 10px;
+        }
+
+        .wide-item {
+            grid-column: span 1;
+            left: 0;
+        }
+
+        .sap-solution {
+            grid-column: span 2;            
+            max-width: 165px;
+            margin: auto;
+        }
+    }
+}
+
 .staff {
     margin-top: 50px;
 
@@ -467,6 +568,36 @@ main {
         background-repeat: no-repeat;
         background-position: right;
         margin: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .staff {
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+
+            .member {
+                width: 150px;
+
+                .description {
+                    font-size: 14px;
+
+                    span {
+
+                    }
+                }
+            }
+        }
+
+        .bg-staff {
+            background-image: url(../img/bg-staff-mb.png);            
+            background-size: auto;
+            background-position: center left;
+            height: 210px;
+        }
     }
 }
 
@@ -584,6 +715,40 @@ main {
     }
 
     
+}
+
+@media (max-width: 768px) {
+    
+    .clientes {
+        padding: 20px;
+
+        .paragraph {
+            font-size: 15px;
+        }
+
+        .slider {
+            margin-top: 20px;
+
+            .slides {
+
+                .slide {
+                    display: grid;
+                    grid-template-columns: repeat(2, 130px);
+                    
+                    .icons {
+
+                        .icon {
+                            width: 110px;
+                            height: 60px;
+                            margin: 0;
+                            border: solid 1px #373737;
+                            border-radius: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }    
 }
 
 .bg-slide-1,
@@ -886,7 +1051,11 @@ main {
     }
 }
 
-@media (max-width: 986px) {
+@media (max-width: 768px) {
+
+    .hidden-dk {
+        display: block;
+    }
     
     .hidden-mb {
         display: none !important;
