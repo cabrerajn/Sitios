@@ -18,6 +18,12 @@
             <section id="navbar" class="navbar">
                 <div class="container">
                     <div class="logo"><img src="./img/logo-navbar.png" alt="Logo G-Minds"></div>
+                    <div class="hamburguer hidden-dk">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
                     <ul class="hidden-mb">
                         <li><a href="#quienes-somos">Quiénes somos</a></li>
                         <li><a href="#servicios">Servicios</a></li>
@@ -30,47 +36,19 @@
                             <img src="./img/flag-argentina.png" alt="Argentina"> ARG <img class="dropdown" src="./img/flecha-dropdown.png">
                         </div>
                         <ul class="options">
-                            <li data-value="arg" data-url="index.html">
+                            <li data-value="arg" data-url="#">
                                 <img src="./img/flag-argentina.png" alt="Argentina"> ARG <img class="dropdown" src="./img/flecha-dropdown.png">
                             </li>
-                            <li data-value="col" data-url="index-col.html">
+                            <li data-value="col" data-url="#">
                                 <img src="./img/flag-colombia.png" alt="Colombia"> COL <img class="dropdown" src="./img/flecha-dropdown.png">
                             </li>
-                            <li data-value="ch" data-url="index-chi.html">
+                            <li data-value="ch" data-url="#">
                                 <img src="./img/flag-chile.png" alt="Chile"> CH <img class="dropdown" src="./img/flecha-dropdown.png">
                             </li>
                         </ul>
-                    </div>     
-                    <div class="hamburger" onclick="toggleMenu()">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                    </div>               
+                    </div>                    
                 </div>
             </section>
-            <!-- Menú Mobile -->
-            <div class="menu hidden-dk" id="menu">
-                <a href="#quienes-somos" class="menu-option">
-                    Quiénes somos
-                    <img src="./img/chevron-mobile.png">
-                </a>
-                <a href="#servicios" class="menu-option">
-                    Servicios
-                    <img src="./img/chevron-mobile.png">
-                </a>
-                <a href="#staff" class="menu-option">
-                    Staff
-                    <img src="./img/chevron-mobile.png">
-                </a>
-                <a href="#clientes" class="menu-option">
-                    Clientes y partners
-                    <img src="./img/chevron-mobile.png">
-                </a>
-                <a href="#contacto" class="menu-option">
-                    Contacto
-                    <img src="./img/chevron-mobile.png">
-                </a>
-            </div>
             <section id="quienes-somos" class="quienes-somos">
                 <div class="encabezado"><h1>G-MINDS continúa <br>generando valor</h1></div>
                 <div class="bajada">Creciendo junto a vos, brindando soluciones <br> de calidad y generando nuevos servicios para <br>satisfacer las necesidades de tu empresa.</div>
@@ -287,21 +265,20 @@
                         </div>
                     </div>
                     <div class="formulario">
-                        <form action="/gminds/archivos/email.php" method="POST">
+                        <form action="email.php" method="post">
                             <div class="form-container">                                                       
                                 <div class="fila">
                                     <input type="text" id="nombre" name="nombre" placeholder="Nombre">
-                                    <input type="text" id="email" name="email" placeholder="Email*">
+                                    <input type="text" id="email" name="email" placeholder="Email">
                                 </div>
                                 <div class="fila">
                                     <input type="text" id="telefono" name="telefono" placeholder="Teléfono">
                                     <input type="text" id="empresa" name="empresa" placeholder="Empresa">
                                 </div>
                                 <div class="fila">
-                                    <input type="text" id="consulta" name="consulta" placeholder="Consulta*">
+                                    <input type="text" id="consulta" name="consulta" placeholder="Consulta">
                                     <input type="Submit" value="Enviar" class="success button">
                                 </div>
-                                <div class="disclaimer">* Estos campos son obligatorios</div>
                             </div>
                         </form>
                     </div>
@@ -313,11 +290,10 @@
                         <form action="email.php" method="post">
                             <div class="form-container">                                                       
                                 <input type="text" id="nombre" name="nombre" placeholder="Nombre">
-                                <input type="text" id="email" name="email" placeholder="Email*" required>
+                                <input type="text" id="email" name="email" placeholder="Email" required>
                                 <input type="text" id="telefono" name="telefono" placeholder="Teléfono">
                                 <input type="text" id="empresa" name="empresa" placeholder="Empresa">
-                                <input type="text" id="consulta" name="consulta" placeholder="Consulta*" required>
-                                <div class="disclaimer">* Estos campos son obligatorios</div>
+                                <input type="text" id="consulta" name="consulta" placeholder="Consulta" required>
                                 <input type="Submit" value="Enviar" class="success button">
                             </div>
                         </form>
@@ -419,26 +395,6 @@
             // Event listeners for arrows
             document.querySelector('.arrow.left').addEventListener('click', () => moveSlide(-1));
             document.querySelector('.arrow.right').addEventListener('click', () => moveSlide(1));
-        </script>
-        <script>/* Menú Mobile */
-            function toggleMenu() {
-                const menu = document.getElementById('menu');
-                const hamburger = document.querySelector('.hamburger');
-                
-                // Alterna la clase 'active' tanto en el menú como en el ícono de la hamburguesa
-                menu.classList.toggle('active');
-                hamburger.classList.toggle('active');
-            }
-            document.querySelectorAll('.menu-option').forEach(option => {
-                option.addEventListener('click', () => {
-                    const menu = document.getElementById('menu');
-                    const hamburger = document.querySelector('.hamburger');
-                    
-                    // Asegúrate de que el menú se cierre
-                    menu.classList.remove('active');
-                    hamburger.classList.remove('active');
-                });
-            });
         </script>
         
     </body>

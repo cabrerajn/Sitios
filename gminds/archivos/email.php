@@ -3,7 +3,7 @@ if(isset($_POST['email'])) {
  
     // Edita las dos líneas siguientes con tu dirección de correo y asunto personalizados
  
-    $email_to = "cabrera.jn@gmail.com";
+    $email_to = "info@g-minds.com.ar";
     
 
  

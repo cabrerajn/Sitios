@@ -164,38 +164,78 @@ main {
 }
 
 @media (max-width: 768px) {
-
     .navbar {
-
         .container {
             width: 100%;
             justify-content: space-between;
-
-            .logo {
-                margin-left: 35px;
-
-                img {
-                    width: 70%;
-                }
-            }
-
-            .hamburguer {
-                display: block;
-                cursor: pointer;
-                margin-right: 35px;
-
-                span {
-                    display: block;
-                    width: 25px;
-                    height: 3px;
-                    background-color: #FAFAFA;
-                    margin: 5px 0;
-                    transition: 0.4s;
-                }
-            }
+            padding: 0 30px;
         }
     }
-
+    .menu.hidden-dk {
+        display: none ;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: #FAFAFA;
+        border-radius: 0 0 5px 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .menu.active {
+        display: flex;
+    }
+    
+    .menu a {
+        color: #104DE5;
+        text-decoration: none;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #EAEAEA;
+        font-weight: 500;
+        font-size: 12px;
+    }
+    
+    .menu a:hover {
+        background-color: #F0F0F0;
+    }
+    
+    .menu a .chevron {
+        font-size: 12px;
+        color: #104DE5;
+    }
+    
+    /* Icono del menú hamburguesa */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+    }
+    
+    .bar {
+        height: 3px;
+        width: 100%;
+        background-color: white;
+        transition: 0.3s;
+    }
+    
+    /* Animación del menú hamburguesa */
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }
 
 .quienes-somos {
@@ -404,15 +444,15 @@ main {
         background-color: #104DE5;
     }
 
-    .full-stack:hover .full-stack-description,
-    .soporte-sap:hover .soporte-sap-description,
-    .sap-basis:hover .sap-basis-description,
+    .full-stack:hover .full-stack-description.hidden-mb,
+    .soporte-sap:hover .soporte-sap-description.hidden-mb,
+    .sap-basis:hover .sap-basis-description.hidden-mb,
     .factory-abap:hover .factory-abap-description,
     .consultoria-sap:hover .consultoria-sap-description,
     .sap-cloud:hover .sap-cloud-description,
-    .sap-security:hover .sap-security-description,
-    .capacitacion:hover .capacitacion-description,
-    .ciberseguridad:hover .ciberseguridad-description,
+    .sap-security:hover .sap-security-description.hidden-mb,
+    .capacitacion:hover .capacitacion-description.hidden-mb,
+    .ciberseguridad:hover .ciberseguridad-description.hidden-mb,
     .consultoria:hover .consultoria-description,
     .sap-solution:hover .sap-solution-description {
         display: block;        
@@ -488,7 +528,7 @@ main {
 
         .grid-container {
             grid-template-columns: repeat(2, 1fr);
-            gap: 35px 60px;
+            gap: 45px 60px;
             background-position: center 225px;
             padding: 0px 40px;
         }
@@ -511,6 +551,8 @@ main {
         .consultoria-description,
         .sap-solution-description {
             font-size: 10px;
+            display: block;
+            font-weight: 400;
         }
 
         .wide-item {
@@ -1088,6 +1130,10 @@ main {
 .contacto {
     background-color: #010101;
     color: #FAFAFA;
+
+    .container.hidden-dk {
+        display: none;
+    }
     
     .container {
         display: flex;
@@ -1162,6 +1208,10 @@ main {
                             top: -20px;
                             color: #595959;
                         }
+
+                        input:focus-visible {
+                            outline:none                            
+                        }
                         
 
                         input.button {
@@ -1177,6 +1227,12 @@ main {
                             left: 200px;
                         }
                     }
+
+                    .disclaimer {
+                        margin-top: 15px;
+                        color: #595959;
+                        font-size: 18px;
+                    }
                 }
             }
         }
@@ -1188,7 +1244,8 @@ main {
         margin-top: -1px;
         padding-top: 60px;
 
-        .container {
+        .container.hidden-dk {
+            display: flex;
             flex-direction: column;
             padding: 0;
 
@@ -1248,6 +1305,12 @@ main {
                             height: 25px;
                             text-align: center;  
                             padding-top: 6px;                          
+                        }
+
+                        .disclaimer {
+                            margin-top: -10px;
+                            font-size: 11px;
+                            line-height: 0;
                         }
                     }                    
                 }
@@ -1365,7 +1428,18 @@ main {
 @media (hover: none) and (pointer: coarse) {
     .argentina,
     .colombia,
-    .chile {
-      pointer-events: none;
+    .chile,
+    .full-stack,    
+    .soporte-sap,
+    .sap-basis,
+    .factory-abap,
+    .consultoria-sap,
+    .sap-cloud,
+    .sap-security,
+    .capacitacion,
+    .ciberseguridad,
+    .consultoria,
+    .sap-solution {
+        pointer-events: none;
     }    
 }
