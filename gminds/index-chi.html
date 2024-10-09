@@ -11,19 +11,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>G-Minds</title>                
         <!--Estilos-->
-        <link rel="stylesheet" href="estilos/index.min.css">              
+        <link rel="stylesheet" href="estilos/index-cl.min.css">              
     </head>
     <body>
         <main>
             <section id="navbar" class="navbar">
                 <div class="container">
                     <div class="logo"><img src="./img/logo-navbar.png" alt="Logo G-Minds"></div>
-                    <div class="hamburguer hidden-dk">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-
                     <ul class="hidden-mb">
                         <li><a href="#quienes-somos">Quiénes somos</a></li>
                         <li><a href="#servicios">Servicios</a></li>
@@ -33,22 +27,55 @@
                     </ul>
                     <div class="country-select hidden-mb">
                         <div class="selected">
-                            <img src="./img/flag-argentina.png" alt="Argentina"> ARG <img class="dropdown" src="./img/flecha-dropdown.png">
+                            <img src="./img/flag-chile.png" alt="Chile"> CH <img class="dropdown" src="./img/flecha-dropdown.png">
                         </div>
                         <ul class="options">
-                            <li data-value="arg" data-url="#">
-                                <img src="./img/flag-argentina.png" alt="Argentina"> ARG <img class="dropdown" src="./img/flecha-dropdown.png">
-                            </li>
-                            <li data-value="col" data-url="#">
-                                <img src="./img/flag-colombia.png" alt="Colombia"> COL <img class="dropdown" src="./img/flecha-dropdown.png">
-                            </li>
-                            <li data-value="ch" data-url="#">
+                            <li data-value="col" data-url="https://g-minds.cl/">
                                 <img src="./img/flag-chile.png" alt="Chile"> CH <img class="dropdown" src="./img/flecha-dropdown.png">
                             </li>
+                            <li data-value="arg" data-url="https://g-minds.com.ar/">
+                                <img src="./img/flag-argentina.png" alt="Argentina"> ARG <img class="dropdown" src="./img/flecha-dropdown.png">
+                            </li>                            
+                            <li data-value="ch" data-url="https://g-minds.co/">
+                                <img src="./img/flag-colombia.png" alt="Colombia"> COL <img class="dropdown" src="./img/flecha-dropdown.png">
+                            </li>
                         </ul>
-                    </div>                    
+                    </div>     
+                    <div class="hamburger" onclick="toggleMenu()">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>               
                 </div>
             </section>
+            <!-- Menú Mobile -->
+            <div class="menu hidden-dk" id="menu">.
+                <div class="selector-pais-mb">
+                    <div class="pais-menu-mb active"><a href="#"><img src="./img/flag-chile-location.png" alt="CHILE"> CH</a></div>
+                    <div class="pais-menu-mb"><a href="https://g-minds.com.ar/"><img src="./img/flag-argentina-location.png" alt="ARGENTINA"> ARG</a></div>
+                    <div class="pais-menu-mb"><a href="https://g-minds.co/"><img src="./img/flag-colombia-location.png" alt="COLOMBIA"> COL</a></div>
+                </div>
+                <a href="#quienes-somos" class="menu-option">
+                    Quiénes somos
+                    <img src="./img/chevron-mobile.png">
+                </a>
+                <a href="#servicios" class="menu-option">
+                    Servicios
+                    <img src="./img/chevron-mobile.png">
+                </a>
+                <a href="#staff" class="menu-option">
+                    Staff
+                    <img src="./img/chevron-mobile.png">
+                </a>
+                <a href="#clientes" class="menu-option">
+                    Clientes y partners
+                    <img src="./img/chevron-mobile.png">
+                </a>
+                <a href="#contacto" class="menu-option">
+                    Contacto
+                    <img src="./img/chevron-mobile.png">
+                </a>
+            </div>
             <section id="quienes-somos" class="quienes-somos">
                 <div class="encabezado"><h1>G-MINDS continúa <br>generando valor</h1></div>
                 <div class="bajada">Creciendo junto a vos, brindando soluciones <br> de calidad y generando nuevos servicios para <br>satisfacer las necesidades de tu empresa.</div>
@@ -71,100 +98,69 @@
                         <span>FULL STACK</span>
                         <span>TEAM</span>
                         <div class="full-stack-description hidden-mb">Desde la concepción de un desarrollo, app o integración, hasta su implementación y soporte será el compromiso de nuestro equipo. En todo momento con nuestros clientes.</div>
-                        <div class="full-stack-description hidden-dk">Desde la concepción de un desarrollo, app o integración, hasta su implementación y soporte.</div>
                     </div>
                     <div class="grid-item soporte-sap">
                         <span>SOPORTE SAP</span>
                         <span>AMS</span>
                         <div class="soporte-sap-description hidden-mb">Realice el mantenimiento de sus aplicaciones con nuestro equipo AMS. Experimente la calidad de un equipo integrado y altamente capacitado.</div>
-                        <div class="soporte-sap-description hidden-dk">Realice el mantenimiento de sus aplicaciones con nuestro equipo AMS.</div>
                     </div>
                     <div class="grid-item sap-basis">
                         <span>SAP BASIS</span>
                         <div class="sap-basis-description hidden-mb">Opere, monitoree y actualice sus sistemas SAP con nuestros servicios Basis especializados.</div>
-                        <div class="sap-basis-description hidden-dk">Opere, monitoree y actualice sus sistemas SAP.</div>
                     </div>
                     <div class="grid-item factory-abap">
                         <span>FACTORY ABAP</span>
                         <span>+ FIORI + BTP</span>
-                        <div class="factory-abap-description">Lleve sus desarrollos, ampliaciones, integraciones y mejoras al próximo nivel.</div>                        
+                        <div class="factory-abap-description hidden-mb">Lleve sus desarrollos, ampliaciones, integraciones y mejoras al próximo nivel.</div>                        
                     </div>
             
                     <!-- Fila 2 -->
                     <div class="grid-item consultoria-sap">
                         <span>CONSULTORÍA SAP</span>
                         <span>PI PO & CPI</span>
-                        <div class="consultoria-sap-description">Gestiones todas las integraciones con nuestros servicios y especialistas.</div>
+                        <div class="consultoria-sap-description hidden-mb">Gestiones todas las integraciones con nuestros servicios y especialistas.</div>
                     </div>
                     <div class="grid-item sap-cloud">
                         <span>SAP CLOUD</span>
                         <span>ALM</span>
-                        <div class="sap-cloud-description">Gestione y Opere sus soluciones Cloud con la plataforma de servicios más potente para sus sistemas SAP.</div>
+                        <div class="sap-cloud-description hidden-mb">Gestione y Opere sus soluciones Cloud con la plataforma de servicios más potente para sus sistemas SAP.</div>
                     </div>
-                    <div class="grid-item sap-security">
+                    <div class="grid-item sap-security mtop">
                         <span>SAP SECURITY</span>
                         <span>& SAP GRC</span>
                         <div class="sap-security-description hidden-mb">Aumente la efectividad de su seguridad y potencie su GRC con nuestros especialistas.</div>
-                        <div class="sap-security-description hidden-dk">Aumente la efectividad de su seguridad y potencie su GRC.</div>
                     </div>
-                    <div class="grid-item capacitacion">
+                    <div class="grid-item capacitacion mtop">
                         <span>CAPACITACIÓN</span>
                         <div class="capacitacion-description hidden-mb">Si su empresa necesita capacitación a medida, nuestros equipos realizan el armado de temarios, material, cronograma, dictado de cursos.</div>
-                        <div class="capacitacion-description hidden-dk">Si su empresa necesita capacitación a medida, realizamos el armado de temarios, material, cronograma, dictado de cursos.</div>
                     </div>
             
                     <!-- Fila 3 -->
                     <div class="grid-item ciberseguridad">
                         <span>CIBERSEGURIDAD</span>
                         <div class="ciberseguridad-description hidden-mb">Amplíe sus fronteras en la seguridad y extienda la misma a todos sus niveles. Desde la concientización, desarrollo y aplicación de los niveles de seguridad están a su disposición.</div>
-                        <div class="ciberseguridad-description hidden-dk">Amplíe sus fronteras en la seguridad, desde la concientización, desarrollo y aplicación de los niveles de seguridad.</div>
                     </div>
                     <div class="grid-item wide-item consultoria">
                         <span>CONSULTORÍA</span>
                         <span>FUNCIONAL SAP</span>
-                        <div class="consultoria-description">Implemente y optimice sus aplicaciones funcionales de la mano de nuestros consultores especializados.</div>
+                        <div class="consultoria-description hidden-mb">Implemente y optimice sus aplicaciones funcionales de la mano de nuestros consultores especializados.</div>
                     </div>
                     <div class="grid-item sap-solution">
                         <span>SAP SOLUTION MANAGER</span>
                         <span>& FOCUSED SOLUTIONS</span>
-                        <div class="sap-solution-description">Gestione el ciclo de vida de sus aplicaciones On Premis e híbridas con la plataforma de servicios más robusta</div>
+                        <div class="sap-solution-description hidden-mb">Gestione el ciclo de vida de sus aplicaciones On Premis e híbridas con la plataforma de servicios más robusta</div>
                     </div>
                 </div>
             </section>
             <section id="staff" class="staff">
                 <div class="container">
                     <div class="member">
-                        <img src="./img/aldo_ortiz.png" alt="Aldo Ortiz" class="hidden-mb">
-                        <img src="./img/aldo_ortiz-mb.png" alt="Aldo Ortiz" class="hidden-dk">
+                        <img src="./img/aldo_ortiz.png" alt="Aldo Ortiz">
                         <div class="description">
                             <span>_Aldo Ortiz</span>
                             <div>CEO de G-Minds</div>
                         </div>
-                    </div>
-                    <div class="member">
-                        <img src="./img/adrian_gabrow.png" alt="Adrian Gabrow" class="hidden-mb">
-                        <img src="./img/adrian_gabrow-mb.png" alt="Adrian Gabrow" class="hidden-dk">
-                        <div class="description">
-                            <span>_Adrián Gabrow</span>
-                            <div>COO de G-Minds</div>
-                        </div>
-                    </div>
-                    <div class="member">
-                        <img src="./img/javier_mandirola.png" alt="Javier Mandirola" class="hidden-mb">
-                        <img src="./img/javier_mandirola-mb.png" alt="Javier Mandirola" class="hidden-dk">
-                        <div class="description">
-                            <span>_Javier Mandirola</span>
-                            <div>CIO de G-Minds</div>
-                        </div>
-                    </div>
-                    <div class="member">
-                        <img src="./img/federico_ortiz.png" alt="Federico Ortiz" class="hidden-mb">
-                        <img src="./img/federico_ortiz-mb.png" alt="Federico Ortiz" class="hidden-dk">
-                        <div class="description">
-                            <span>_Federico Ortiz</span>
-                            <div>CFO de G-Minds</div>
-                        </div>
-                    </div>
+                    </div>                    
                 </div>
                 <div class="bg-staff"></div>
             </section>
@@ -216,32 +212,34 @@
             </section>
             <div class="bg-slide bg-slide-1"></div><!--Background zócalo del slider de clientes-->
             <section class="locations">
-                <img src="./img/mundo.png" alt="Mapa del mundo" class="imagen-mundo hidden-mb"> 
-                <div class="argentina">
-                    <div class="argentina-description">
-                        <span class="pais">
-                            <img src="./img/flag-argentina-location.png" alt="Argentina">
-                            <span>ARG</span>
-                        </span>
-                        <span class="since">Desde el año 2008</span>
+                <div class="contenedor">
+                    <img src="./img/mundo.png" alt="Mapa del mundo" class="imagen-mundo hidden-mb"> 
+                    <div class="argentina">
+                        <div class="argentina-description">
+                            <span class="pais">
+                                <img src="./img/flag-argentina-location.png" alt="Argentina">
+                                <span>ARG</span>
+                            </span>
+                            <span class="since">Buenos Aires</span>
+                        </div>
                     </div>
-                </div>
-                <div class="chile">
-                    <div class="chile-description">
-                        <span class="pais">
-                            <img src="./img/flag-chile-location.png" alt="Chile">
-                            <span>CH</span>
-                        </span>
-                        <span class="since">Desde el año 2022</span>
+                    <div class="chile">
+                        <div class="chile-description">
+                            <span class="pais">
+                                <img src="./img/flag-chile-location.png" alt="Chile">
+                                <span>CH</span>
+                            </span>
+                            <span class="since">Santiago de Chile</span>
+                        </div>
                     </div>
-                </div>
-                <div class="colombia">
-                    <div class="colombia-description">
-                        <span class="pais">
-                            <img src="./img/flag-colombia-location.png" alt="Colombia">
-                            <span>COL</span>
-                        </span>
-                        <span class="since">Desde el año 2022</span>
+                    <div class="colombia">
+                        <div class="colombia-description">
+                            <span class="pais">
+                                <img src="./img/flag-colombia-location.png" alt="Colombia">
+                                <span>COL</span>
+                            </span>
+                            <span class="since">Bogotá</span>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -254,31 +252,32 @@
                             <div class="mail">
                                 <img src="./img/icono-mail.png" alt="Ícono correo electrónico"/>
                                 <div>
-                                    <div class="mail-direction"><a href="mailto:info@g-minds.com.ar" target="_blank">info@g-minds.com.ar</a></div>
-                                    <div class="mail-direction"><a href="mailto:administracion@g-minds.com.ar" target="_blank">administracion@g-minds.com.ar</a></div>
+                                    <div class="mail-direction"><a href="mailto:info@g-minds.cl" target="_blank">info@g-minds.cl</a></div>
+                                    <div class="mail-direction"><a href="mailto:administracion@g-minds.cl" target="_blank">administracion@g-minds.cl</a></div>
                                 </div>
                             </div>
                             <div class="ubicacion">
                                 <img src="./img/icono-ubicacion.png" alt="Ícono ubicación">
-                                <div>CABA, Argentina</div>
+                                <div>Almirante Pastene 185, Of. 405, <br> Providencia, Santiago de Chile</div>
                             </div>
                         </div>
                     </div>
                     <div class="formulario">
-                        <form action="email.php" method="post">
+                        <form action="email.php" method="POST">
                             <div class="form-container">                                                       
                                 <div class="fila">
                                     <input type="text" id="nombre" name="nombre" placeholder="Nombre">
-                                    <input type="text" id="email" name="email" placeholder="Email">
+                                    <input type="text" id="email" name="email" placeholder="Email*">
                                 </div>
                                 <div class="fila">
                                     <input type="text" id="telefono" name="telefono" placeholder="Teléfono">
                                     <input type="text" id="empresa" name="empresa" placeholder="Empresa">
                                 </div>
                                 <div class="fila">
-                                    <input type="text" id="consulta" name="consulta" placeholder="Consulta">
+                                    <input type="text" id="consulta" name="consulta" placeholder="Consulta*">
                                     <input type="Submit" value="Enviar" class="success button">
                                 </div>
+                                <div class="disclaimer">* Estos campos son obligatorios</div>
                             </div>
                         </form>
                     </div>
@@ -287,13 +286,14 @@
                     <div class="title">CONTACTANOS</div>
                     <div class="bajada">Envíanos tu consulta y te responderemos pronto.</div>
                     <div class="formulario">
-                        <form action="email.php" method="post">
+                        <form action="email-cl.php" method="post">
                             <div class="form-container">                                                       
                                 <input type="text" id="nombre" name="nombre" placeholder="Nombre">
-                                <input type="text" id="email" name="email" placeholder="Email" required>
+                                <input type="text" id="email" name="email" placeholder="Email*" required>
                                 <input type="text" id="telefono" name="telefono" placeholder="Teléfono">
                                 <input type="text" id="empresa" name="empresa" placeholder="Empresa">
-                                <input type="text" id="consulta" name="consulta" placeholder="Consulta" required>
+                                <input type="text" id="consulta" name="consulta" placeholder="Consulta*" required>
+                                <div class="disclaimer">* Estos campos son obligatorios</div>
                                 <input type="Submit" value="Enviar" class="success button">
                             </div>
                         </form>
@@ -301,13 +301,13 @@
                     <div class="datos-container">
                         <div class="ubicacion">
                             <img src="./img/icono-ubicacion.png" alt="Ícono ubicación">
-                            <div>CABA, Argentina</div>
+                            <div>Almirante Pastene 185, Of. 405,<br> Providencia, Santiago de Chile</div>
                         </div>
                         <div class="mail">
                             <img src="./img/icono-mail.png" alt="Ícono correo electrónico"/>
                             <div>
-                                <div class="mail-direction"><a href="mailto:info@g-minds.com.ar" target="_blank">info@g-minds.com.ar</a></div>
-                                <div class="mail-direction"><a href="mailto:administracion@g-minds.com.ar" target="_blank">administracion@g-minds.com.ar</a></div>
+                                <div class="mail-direction"><a href="mailto:info@g-minds.cl" target="_blank">info@g-minds.cl</a></div>
+                                <div class="mail-direction"><a href="mailto:administracion@g-minds.cl" target="_blank">administracion@g-minds.cl</a></div>
                             </div>
                         </div>
                     </div>
@@ -395,6 +395,26 @@
             // Event listeners for arrows
             document.querySelector('.arrow.left').addEventListener('click', () => moveSlide(-1));
             document.querySelector('.arrow.right').addEventListener('click', () => moveSlide(1));
+        </script>
+        <script>/* Menú Mobile */
+            function toggleMenu() {
+                const menu = document.getElementById('menu');
+                const hamburger = document.querySelector('.hamburger');
+                
+                // Alterna la clase 'active' tanto en el menú como en el ícono de la hamburguesa
+                menu.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            }
+            document.querySelectorAll('.menu-option').forEach(option => {
+                option.addEventListener('click', () => {
+                    const menu = document.getElementById('menu');
+                    const hamburger = document.querySelector('.hamburger');
+                    
+                    // Asegúrate de que el menú se cierre
+                    menu.classList.remove('active');
+                    hamburger.classList.remove('active');
+                });
+            });
         </script>
         
     </body>
