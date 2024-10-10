@@ -462,7 +462,8 @@ main {
     .capacitacion-description,
     .ciberseguridad-description,
     .consultoria-description,
-    .sap-solution-description {
+    .sap-solution-description,
+    .sap-shared-description {
         display: none;
         color: #373737;
         text-wrap: wrap;
@@ -484,7 +485,8 @@ main {
     .capacitacion:hover span,
     .ciberseguridad:hover span,
     .consultoria:hover span,
-    .sap-solution:hover span{
+    .sap-solution:hover span,
+    .sap-shared:hover span{
         background-color: #104DE5;
     }
 
@@ -498,8 +500,10 @@ main {
     .capacitacion:hover .capacitacion-description.hidden-mb,
     .ciberseguridad:hover .ciberseguridad-description.hidden-mb,
     .consultoria:hover .consultoria-description,
-    .sap-solution:hover .sap-solution-description {
-        display: block;        
+    .sap-solution:hover .sap-solution-description,
+    .sap-shared:hover .sap-shared-description {
+        display: block; 
+        max-width: 350px;       
     }
     
     /* Fila 3: El segundo elemento ocupa 2 columnas */
@@ -572,9 +576,9 @@ main {
 
         .grid-container {
             grid-template-columns: repeat(2, 1fr);
-            gap: 0px 60px;
+            gap: 0px 20px;
             background-position: center 225px;
-            padding: 0px 40px;
+            padding: 0px 20px;
         }
 
         .grid-item {
@@ -592,11 +596,11 @@ main {
             left: 0;
         }
 
-        .sap-solution {
+        /* .sap-solution {
             grid-column: span 2;            
             max-width: 165px;
             margin: auto;
-        }
+        } */
     }
 }
 

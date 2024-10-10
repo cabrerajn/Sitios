@@ -499,7 +499,8 @@ main {
     .ciberseguridad:hover .ciberseguridad-description.hidden-mb,
     .consultoria:hover .consultoria-description,
     .sap-solution:hover .sap-solution-description {
-        display: block;        
+        display: block; 
+        max-width: 350px;       
     }
     
     /* Fila 3: El segundo elemento ocupa 2 columnas */
