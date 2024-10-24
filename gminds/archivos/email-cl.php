@@ -68,9 +68,12 @@ $headers = 'From: '.$email_from."\r\n".
  
 'X-Mailer: PHP/' . phpversion();
  
-@mail($email_to, $email_subject, $email_message, $headers);  
+if (@mail($email_to, $email_subject, $email_message, $headers)){  
 
-	echo  "<META HTTP-EQUIV=\"Refresh\" CONTENT=\"0;URL=https://www.g-minds.com.ar\">";
+	echo  "succes";
+} else {
+    echo "Error al enviar el mensaje.";
+}
 
 }
  

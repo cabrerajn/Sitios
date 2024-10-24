@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es-AR">
     <head>
+        <link rel="stylesheet" href="estilos/index.min.css"> 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="cache-control" content="max-age=0">
@@ -9,12 +10,22 @@
         <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT">
         <meta http-equiv="pragma" content="no-cache">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>G-Minds</title>                
-        <!--Estilos-->
-        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" as="style" onload="this.rel='stylesheet'">
-        <link rel="stylesheet" href="estilos/index.min.css">   
-
-          
+        <meta name="Description" content="Contáctenos: +54 911 7515 3834. Consultores especializados en la Plataforma de Servicios SAP Solution Manager." />
+		<meta name="Keywords" content="g-minds,SAP Solution Manager, focused build, focused run, focused insight, focused solutions, SAP Cloud ALM, SOLMAN, Activate, ITIL, CRM, Request Management, BPM, BPMN, Run SAP, Test, Process Management, ITPPM, PPM, ITSM, Best Practices, Project Management, Diagrama, Proceso, End to End, E2E, Metodología, Solución, Branch, Escenario, PI, BI, S/4, HANA, Fiori, Modelado de procesos, Monitoring, Consultoría, Consultor, Consulting, Gestión, Basis, TDMS, GRC, Focused Build, Focused Insights, Focused Run, Focused Solutions, ABAP, Factory, Activate, IA, ITSM, Agile" />
+        <meta property="og:title" content="G-Minds. Consultores SAP" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://www.g-minds.com.ar/" />
+		<meta property="og:description" content="Consultores especializados en la Plataforma de Servicios SAP Solution Manager." />
+        <title>G-Minds - Servicios de consultoría SAP/Expertos SAP Solution Manager</title>                       
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" as="style" onload="this.rel='stylesheet'">        
+        <link rel="preload" as="image" href="img/bg-quienes-somos-mb.png" media="(min-width: 360px)" crossorigin />
+        <link rel="preload" as="image" href="img/bg-quienes-somos.png" media="(min-width: 1024px)" crossorigin />
+        <link rel="preload" as="image" href="img/bg-servicios.gif" crossorigin />        
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">         
     </head>
     <body>
         <main>
@@ -38,7 +49,10 @@
                             </li>
                             <li data-value="col" data-url="https://g-minds.co/">
                                 <img src="./img/flag-colombia.png" alt="Colombia"> COL <img class="dropdown" src="./img/flecha-dropdown.png">
-                            </li>                            
+                            </li>     
+                            <li data-value="ch" data-url="https://g-minds.cl/">
+                                <img src="./img/flag-chile.png" alt="Chile"> CH <img class="dropdown" src="./img/flecha-dropdown.png">
+                            </li>                       
                         </ul>
                     </div>     
                     <div class="hamburger" onclick="toggleMenu()">
@@ -52,7 +66,8 @@
             <div class="menu hidden-dk" id="menu">.
                 <div class="selector-pais-mb">
                     <div class="pais-menu-mb active"><a href="#"><img src="./img/flag-argentina-location.png" alt="ARGENTINA"> ARG</a></div>
-                    <div class="pais-menu-mb"><a href="https://g-minds.co/"><img src="./img/flag-colombia-location.png" alt="COLOMBIA"> COL</a></div>                    
+                    <div class="pais-menu-mb"><a href="https://g-minds.co/"><img src="./img/flag-colombia-location.png" alt="COLOMBIA"> COL</a></div> 
+                    <div class="pais-menu-mb"><a href="https://g-minds.cl/"><img src="./img/flag-chile-location.png" alt="CHILE"> CH</a></div>                   
                 </div>
                 <a href="#quienes-somos" class="menu-option">
                     Quiénes somos
@@ -75,11 +90,11 @@
                     <img src="./img/chevron-mobile.png">
                 </a>
             </div>
-            <section id="quienes-somos" class="quienes-somos">
+            <section id="main-banner" class="main-banner">
                 <div class="encabezado"><h1>G-MINDS continúa <br>generando valor</h1></div>
                 <div class="bajada">Creciendo junto a vos, brindando soluciones <br> de calidad y generando nuevos servicios para <br>satisfacer las necesidades de tu empresa.</div>
             </section>
-            <section id="servicios" class="servicios">
+            <section id="quienes-somos" class="quienes-somos">
                 <div class="container-1">
                     <div class="content-left">
                         <div class="paragraph"><span class="azul">G-Minds</span> brinda <span class="underline"> *servicios</span> SAP desde 2008.</div>
@@ -90,6 +105,8 @@
                         <div class="pie-texto">LOS VALORES SUSTENTAN NUESTRO TRABAJO</div>
                     </div>
                 </div>
+            </section>
+            <section id="servicios" class="servicios">
                 <div class="service-description">Brindamos servicios diferenciales de soluciones SAP y No-SAP. Consultoría, tecnología y<br class="hidden-mb"> outsorcing de primer nivel.</div>
                 <div class="grid-container">
                     <!-- Fila 1 -->
@@ -158,37 +175,41 @@
             <section id="staff" class="staff">
                 <div class="container">
                     <div class="member">
-                        <img src="./img/aldo_ortiz.png" alt="Aldo Ortiz">
+                        <img class="hidden-mb" src="./img/aldo_ortiz.png" alt="Aldo Ortiz">
+                        <img class="hidden-dk" src="./img/aldo_ortiz_mb.png" alt="Aldo Ortiz">
                         <div class="description">
                             <span>_Aldo Ortiz</span>
-                            <div>CEO de G-Minds</div>
+                            <div>CEO</div>
                         </div>
                     </div>
                     <div class="member">
-                        <img src="./img/adrian_gabrow.png" alt="Adrian Gabrow">
+                        <img class="hidden-mb" src="./img/adrian_gabrow.png" alt="Adrian Gabrow">
+                        <img class="hidden-dk" src="./img/adrian_gabrow_mb.png" alt="Adrian Gabrow">
                         <div class="description">
                             <span>_Adrián Gabrow</span>
-                            <div>COO de G-Minds</div>
+                            <div>COO</div>
                         </div>
                     </div>
                     <div class="member">
-                        <img src="./img/javier_mandirola.png" alt="Javier Mandirola">
-                        <div class="description">
-                            <span>_Javier Mandirola</span>
-                            <div>CIO de G-Minds</div>
-                        </div>
-                    </div>
-                    <div class="member">
-                        <img src="./img/federico_ortiz.png" alt="Federico Ortiz">
+                        <img class="hidden-mb" src="./img/federico_ortiz.png" alt="Federico Ortiz">
+                        <img class="hidden-dk" src="./img/federico_ortiz_mb.png" alt="Federico Ortiz">
                         <div class="description">
                             <span>_Federico Ortiz</span>
-                            <div>CFO de G-Minds</div>
+                            <div>CFO</div>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img class="hidden-mb" src="./img/javier_mandirola.png" alt="Javier Mandirola">
+                        <img class="hidden-dk" src="./img/javier_mandirola_mb.png" alt="Javier Mandirola">
+                        <div class="description">
+                            <span>_Javier Mandirola</span>
+                            <div>CIO</div>
                         </div>
                     </div>
                 </div>
                 <div class="bg-staff"></div>
             </section>
-            <section id="clientes" class="clientes">
+            <section id="clientes" class="clientes hidden-mb">
                 <div class="paragraph">Ellos son algunos de los que <span>confían en nuestra propuesta</span> y con quienes superamos día a día nuevos desafíos.</div>
                 <div class="paragraph">Quienes nos suman para, conjuntamente, llevar valor agregado a sus proyectos.</div>
                 <div class="slider">
@@ -234,7 +255,7 @@
                     </div>                    
                 </div>                
             </section>
-            <div class="bg-slide bg-slide-1"></div><!--Background zócalo del slider de clientes-->
+            <div class="bg-slide bg-slide-1 hidden-mb"></div><!--Background zócalo del slider de clientes-->
             <section class="locations">
                 <div class="contenedor">
                     <img src="./img/mundo.png" alt="Mapa del mundo" class="imagen-mundo hidden-mb"> 
@@ -272,7 +293,7 @@
                     <div class="info-contacto">
                         <div class="title">CONTACTANOS</div>
                         <div class="contenedor">
-                            <div class="texto">Envíanos tu consulta y te responderemos pronto.</div>
+                            <div class="texto">Envianos tu consulta y te responderemos pronto.</div>
                             <div class="mail">
                                 <img src="./img/icono-mail.png" alt="Ícono correo electrónico"/>
                                 <div>
@@ -287,19 +308,21 @@
                         </div>
                     </div>
                     <div class="formulario">
-                        <form action="email.php" method="POST">
-                            <div class="form-container">                                                       
+                        <form id="contactForm">
+                            <div class="form-container">      
+                                <div class="mensaje-exito"><img src="./img/check-form.png">¡Tu consulta se envió con éxito!</div>
+                                <div class="mensaje-error"><img src="./img/error-form.png">Completá los campos obligatorios</div>   
                                 <div class="fila">
-                                    <input type="text" id="nombre" name="nombre" placeholder="Nombre">
-                                    <input type="text" id="email" name="email" placeholder="Email*">
+                                    <input type="text" id="nombre" name="nombre" placeholder="Nombre*">
+                                    <input type="email" id="email" name="email" placeholder="Email*">
                                 </div>
                                 <div class="fila">
-                                    <input type="text" id="telefono" name="telefono" placeholder="Teléfono">
+                                    <input type="number" id="telefono" name="telefono" placeholder="Teléfono">
                                     <input type="text" id="empresa" name="empresa" placeholder="Empresa">
                                 </div>
                                 <div class="fila">
                                     <input type="text" id="consulta" name="consulta" placeholder="Consulta*">
-                                    <input type="Submit" value="Enviar" class="success button">
+                                    <input type="submit" value="Enviar" class="success button">
                                 </div>
                                 <div class="disclaimer">* Estos campos son obligatorios</div>
                             </div>
@@ -308,17 +331,19 @@
                 </div>
                 <div class="container hidden-dk">
                     <div class="title">CONTACTANOS</div>
-                    <div class="bajada">Envíanos tu consulta y te responderemos pronto.</div>
+                    <div class="bajada">Envianos tu consulta y te responderemos pronto.</div>
                     <div class="formulario">
-                        <form action="email.php" method="post">
-                            <div class="form-container">                                                       
-                                <input type="text" id="nombre" name="nombre" placeholder="Nombre">
-                                <input type="text" id="email" name="email" placeholder="Email*" required>
-                                <input type="text" id="telefono" name="telefono" placeholder="Teléfono">
+                        <form id="contactForm">
+                            <div class="form-container">     
+                                <div class="mensaje-exito"><img src="./img/check-form.png">¡Tu consulta se envió con éxito!</div>                                                  
+                                <div class="mensaje-error"><img src="./img/error-form.png">Completá los campos obligatorios</div>   
+                                <input type="text" id="nombre" name="nombre" placeholder="Nombre*">
+                                <input type="email" id="email" name="email" placeholder="Email*">
+                                <input type="number" id="telefono" name="telefono" placeholder="Teléfono">
                                 <input type="text" id="empresa" name="empresa" placeholder="Empresa">
-                                <input type="text" id="consulta" name="consulta" placeholder="Consulta*" required>
+                                <input type="text" id="consulta" name="consulta" placeholder="Consulta*">
                                 <div class="disclaimer">* Estos campos son obligatorios</div>
-                                <input type="Submit" value="Enviar" class="success button">
+                                <input type="submit" value="Enviar" class="success button">
                             </div>
                         </form>
                     </div>
@@ -438,6 +463,67 @@
                     menu.classList.remove('active');
                     hamburger.classList.remove('active');
                 });
+            });
+        </script>
+        <!-- /* Formulario */ -->
+        <script>
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                event.preventDefault(); 
+                const nombre = document.getElementById('nombre').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const consulta = document.getElementById('consulta').value.trim();
+                const formData = new FormData(this);  
+                let errorMensaje=0;
+                if (!nombre){
+                    document.getElementById('nombre').style.border='1px solid #3E1C1C'
+                    document.getElementsByClassName('mensaje-error')[0].style.display='flex'
+                    errorMensaje=1
+                }
+                else {
+                    document.getElementById('nombre').style.border='none'
+                }
+                if (!email) {
+                    document.getElementById('email').style.border='1px solid #3E1C1C'
+                    document.getElementsByClassName('mensaje-error')[0].style.display='flex'
+                    errorMensaje=1
+                }
+                else {
+                    document.getElementById('email').style.border='none'
+                }
+                if (!consulta) {
+                    document.getElementById('consulta').style.border='1px solid #3E1C1C'
+                    document.getElementsByClassName('mensaje-error')[0].style.display='flex'
+                    errorMensaje=1
+                }
+                else {
+                    document.getElementById('consulta').style.border='none'
+                }
+                if (errorMensaje!=1){
+                    fetch('email.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.text())
+                    .then(response => {
+                        if (response.trim() === "success") {
+                            document.getElementById('contactForm').reset();
+                            document.getElementsByClassName('mensaje-exito')[0].style.display = 'flex';
+                            window.scrollTo({
+                                top: document.querySelector('.formulario').offsetTop,
+                                behavior: 'smooth'
+                            });
+                        } else {
+                            console.error('Error en el servidor:', response);
+                            document.getElementsByClassName('mensaje-error')[0].innerHTML = '<img src="./img/error-form.png" alt="Error"> Error al enviar el formulario intente más tarde'
+                            document.getElementsByClassName('mensaje-error')[0].style.display = 'flex'
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error al enviar el formulario:', error);
+                        document.getElementsByClassName('mensaje-error')[0].innerHTML = '<img src="./img/error-form.png" alt="Error"> Error al enviar el formulario intente más tarde'
+                        document.getElementsByClassName('mensaje-error')[0].style.display = 'flex'
+                    });
+                }
             });
         </script>
         
