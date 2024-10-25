@@ -406,7 +406,7 @@ input[type="number"] {
             box-sizing: border-box;
             position: absolute;
             margin-top: 170px;
-            margin-left: -20px;
+            margin-left: -100px;
         }
 
         .pie-texto {
@@ -420,7 +420,7 @@ input[type="number"] {
             text-wrap: balance;
             position: absolute;
             box-sizing: border-box;
-            margin-left: -40px;
+            margin-left: -120px;
             margin-top: 470px;
         }
     }
@@ -704,7 +704,7 @@ input[type="number"] {
 .clientes {
     background-color: #010101;
     margin-top: -70px;
-    padding: 100px;
+    padding: 50px;
 
     .paragraph {
         font-size: 26px;
@@ -880,8 +880,8 @@ input[type="number"] {
     background-size: contain;
     background-color: #010101;
     position: relative;
-    top: -50px;
-    margin-bottom: -50px;
+    top: -10px;
+    margin-bottom: -10px;
 } 
 
 .bg-slide-2 {
@@ -1052,8 +1052,8 @@ input[type="number"] {
             text-wrap: nowrap;
             font-weight: 700;
             padding: 5px 10px;
-            text-align: center;
             position: relative;
+            width: fit-content;
             left: 26px;
             top: -50px;
         }
@@ -1201,6 +1201,7 @@ input[type="number"] {
 .contacto {
     background-color: #010101;
     color: #FAFAFA;
+    padding-bottom: 60px;
 
     .container.hidden-dk {
         display: none;
