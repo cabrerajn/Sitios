@@ -86,16 +86,13 @@ input[type="number"] {
         }
 
         ul li:nth-child(4) {
-            max-width: 260px;
+            max-width: 200px;
             display: flex; 
             justify-content: center;
             margin-right: -15px;
         }
 
-        ul li:nth-child(4) a {
-            min-width: 260px; 
-        }
-
+    
         ul li a:hover {
             font-weight: 700;
         }   
@@ -248,7 +245,7 @@ input[type="number"] {
     .menu a {
         color: #104DE5;
         text-decoration: none;
-        padding: 15px 20px;
+        padding: 10px 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -364,7 +361,7 @@ input[type="number"] {
         box-sizing: border-box;
 
         .paragraph {
-            max-width: 580px;
+            max-width: 600px;
 
             .azul {
                 color: #104DE5;
@@ -495,6 +492,7 @@ input[type="number"] {
 
     .consultoria-description {
         text-wrap: balance;
+        max-width: 195px !important;
     }
 
     .full-stack:hover span,    
@@ -531,8 +529,7 @@ input[type="number"] {
     /* Fila 3: El segundo elemento ocupa 2 columnas */
     .wide-item {
         grid-column: span 2;
-        position: relative;
-        left: 25%;
+        margin: auto;
         width: fit-content;
     }    
 }
@@ -569,7 +566,7 @@ input[type="number"] {
             }
 
             .content-right {
-                margin-left: 15%;
+                margin-left: 110px;
                 flex: none;
                 height: 550px;
                 max-width: 100%;
@@ -579,6 +576,7 @@ input[type="number"] {
                     max-width: 240px;
                     margin-top: 100px;
                     padding: 30px 20px;
+                    margin-left: -60px;
                 }
 
                 .pie-texto {
@@ -586,6 +584,7 @@ input[type="number"] {
                     margin-top: 250px;
                     max-width: 240px;
                     padding: 10px 5px;
+                    margin-left: -80px;
                 }
             }
         }
@@ -611,6 +610,13 @@ input[type="number"] {
             height: 70px;
         }
 
+        .wide-mobile {
+            grid-column: span 2;
+            margin: auto;
+            position: relative;
+            left: -20px;
+        }
+
         .mtop {
             margin-top: 130px;
         }
@@ -618,6 +624,7 @@ input[type="number"] {
         .wide-item {
             grid-column: span 1;
             left: 0;
+            margin: 0;
         }
 
         /* .sap-solution {
@@ -857,7 +864,7 @@ input[type="number"] {
             background-color: #104DE5;
             text-wrap: nowrap;
             font-weight: 700;
-            padding: 5px 10px;
+            padding: 5px 30px 5px 10px;
             position: relative;
             width: fit-content;
             left: 26px;
@@ -994,9 +1001,9 @@ input[type="number"] {
                     background-color: #104DE5;
                     text-wrap: nowrap;
                     font-weight: 700;
-                    padding: 3px 5px;
-                    text-align: center;
+                    padding: 3px 20px 3px 5px;
                     position: relative;
+                    width: fit-content;
                     left: 26px;
                 }
             }
@@ -1119,7 +1126,12 @@ input[type="number"] {
                             position: relative;
                             left: 200px;
                             cursor: pointer;
+                            top: 25px;
                         }
+                    }
+
+                    .ancho-fijo {
+                        width: 508px;
                     }
 
                     .disclaimer {
