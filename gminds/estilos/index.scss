@@ -122,7 +122,7 @@ input[type="number"] {
             background-color: #104DE5;
             color: #FAFAFA;
             padding: 10px;
-            font-size: 26px;
+            font-size: 22px;
         }
 
         .country-select .selected:hover {
@@ -130,11 +130,11 @@ input[type="number"] {
         }
         
         .country-select .selected img {
-            width: 58px;
+            width: 48px;
         }
 
         .country-select .selected .dropdown {
-            width: 20px;
+            width: 15px;
             margin-left: 8px;
             margin-top: 5px;
             border: none;
@@ -165,7 +165,7 @@ input[type="number"] {
             transition: background-color 0.3s;
             color: #373737;
             width: 100%;
-            font-size: 26px;
+            font-size: 22px;
             font-weight: 600;
             box-sizing: border-box;
         }
@@ -175,7 +175,7 @@ input[type="number"] {
         }
         
         .country-select .options li img {
-            width: 58px;
+            width: 48px;
             margin-right: 10px;
         }
         .country-select .options li img.dropdown {
