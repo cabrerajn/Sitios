@@ -63,7 +63,7 @@ input[type="number"] {
         }
 
         ul li {
-            font-size: 26px;
+            font-size: 22px;
             text-wrap: nowrap;
             max-width: 200px;
         }
@@ -78,6 +78,14 @@ input[type="number"] {
             text-align: center;
             display: inline-block;
             transition: font-weight 0.3s ease;
+        }
+
+        ul li:nth-child(1) {
+            max-width: 186px;
+        }
+
+        ul li:nth-child(1) a{
+            min-width: 186px;
         }
 
         ul li:nth-child(3) {
