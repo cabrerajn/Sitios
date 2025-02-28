@@ -39,6 +39,19 @@
                         <li><a href="#clientes">Clientes y partners</a></li>
                         <li><a href="#contacto">Contacto</a></li>
                     </ul>
+                    <div class="language-select">
+                        <div class="selected">
+                            <img src="./img/icono-lenguaje.png" alt="Español"> ESP 
+                        </div>
+                        <ul class="options">
+                            <li data-value="esp" data-url="https://google.com">
+                                Español
+                            </li>
+                            <li data-value="eng" data-url="https://ole.com.ar">
+                                English
+                            </li>                                                  
+                        </ul>
+                    </div> 
                     <div class="country-select hidden-mb">
                         <div class="selected">
                             <img src="./img/flag-colombia.png" alt="Colombia"> COL <img class="dropdown" src="./img/flecha-dropdown.png">
@@ -157,15 +170,20 @@
                         <span>CIBERSEGURIDAD</span>
                         <div class="ciberseguridad-description hidden-mb">Amplíe sus fronteras en la seguridad, desde la concientización, desarrollo y aplicación de los niveles de seguridad.</div>
                     </div>
-                    <div class="grid-item consultoria wide-item">
+                    <div class="grid-item consultoria">
                         <span>CONSULTORÍA</span>
                         <span>FUNCIONAL SAP</span>
                         <div class="consultoria-description hidden-mb">Implemente y optimice sus aplicaciones funcionales de la mano de nuestros consultores especializados.</div>
                     </div>
-                    <div class="grid-item sap-solution wide-mobile">
+                    <div class="grid-item sap-solution">
                         <span>SAP SOLUTION MANAGER</span>
                         <span>& FOCUSED SOLUTIONS</span>
                         <div class="sap-solution-description hidden-mb">Gestione el ciclo de vida de sus aplicaciones On Premis e híbridas con la plataforma de servicios más robusta.</div>
+                    </div>
+                    <div class="grid-item inteligencia">
+                        <span>INTELIGENCIA</span>
+                        <span>ARTIFICIAL</span>
+                        <div class="inteligencia-description hidden-mb">En un mundo cada vez más competitivo, la IA es la clave para transformar su negocio y llevarlo al siguiente nivel.</div>
                     </div>
                 </div>
             </section>
@@ -258,6 +276,7 @@
                     <div class="partner-cli"><a href="https://somoscmi.com/es/" target="_blank"><img class="hidden-mb" src="./img/cmi-co.png" alt="CMI" href="https://somoscmi.com/es/" targert="_blank"><img class="hidden-dk" src="./img/cmi-co-mb.png" alt="CMI"></a></div>
                     <div class="partner-cli"><a href="https://www.stratesys-ts.com/es/" target="_blank"><img class="hidden-mb" src="./img/stratesys-co.png" alt="Stratesys" href="https://www.stratesys-ts.com/es/" targert="_blank"><img class="hidden-dk" src="./img/stratesys-co-mb.png" alt="Stratesys"></a></div>
                     <div class="partner-cli"><a href="https://globalhitss.com/" target="_blank"><img class="hidden-mb" src="./img/globalhits-co.png" alt="Global Hits"><img class="hidden-dk" src="./img/globalhits-co-mb.png" alt="Global Hits"></a></div>
+                    <div class="partner-cli accenture"><a href="https://www.accenture.com/ar-es" target="_blank"><img src="./img/cli-accenture.png" alt="Accenture"></a></div>
                 </div>                             
             </section>
             <div class="bg-clientes"></div><!--Background zócalo del slider de clientes-->
@@ -388,7 +407,21 @@
                     window.location.href = this.getAttribute('data-url');
                 });
             });
-        </script>        
+        </script>   
+        <script>/*Dropdown menu lenguaje*/
+            document.querySelector('.language-select .selected').addEventListener('click', function() {
+                const optionsMenu = document.querySelector('.language-select .options');
+                optionsMenu.style.display = optionsMenu.style.display === 'none' || optionsMenu.style.display === '' ? 'flex' : 'none';
+            });
+            document.querySelectorAll('.language-select .options li').forEach(option => {
+                option.addEventListener('click', function() {
+                    const selected = document.querySelector('.language-select .selected');
+                    selected.innerHTML = this.innerHTML;
+                    document.querySelector('.language-select .options').style.display = 'none';
+                    window.location.href = this.getAttribute('data-url');
+                });
+            });
+        </script>          
         
         <script>/* Menú Mobile */
             function toggleMenu() {

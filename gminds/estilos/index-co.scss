@@ -107,12 +107,54 @@ input[type="number"] {
         ul li a:hover {
             font-weight: 700;
         }   
+        .language-select {
+            position: relative;
+            width: fit-content;
+            cursor: pointer;
+            margin-left: 60px;
+
+            .selected {
+                display: flex;
+                gap: 12px;
+                font-size: 20px;
+                align-items: center;
+            }
+
+            .options {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: -30px;
+                width: 130px;
+                background-color: #FAFAFA;
+                border: 1px solid #104DE5;
+                max-height: 150px;
+                overflow-y: visible;
+                z-index: 1000;
+                margin: 0;
+                margin-top: 20px;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;;
+
+                li {
+                    color: #104DE5;
+                    font-size: 20px;
+                }
+
+                li:hover {
+                    font-weight: bold;
+                }
+            }
+        }
 
         .country-select {
             position: relative;
             width: fit-content;
             cursor: pointer;
-            margin-left: 60px;
+            margin-left: 20px;
         }
         
         .country-select .selected {
@@ -198,6 +240,23 @@ input[type="number"] {
 
                 img {
                     width: 64px;
+                }
+            }
+
+            .language-select {
+                margin-left: 130px;
+    
+                .selected {
+                    display: flex;
+                    gap: 12px;
+                    font-size: 16px;
+                    align-items: center;
+                }
+    
+                .options {
+                    left: -10px;
+                    width: 90px;                   
+                    margin-top: 5px;                    
                 }
             }
         }
@@ -493,7 +552,8 @@ input[type="number"] {
     .ciberseguridad-description,
     .consultoria-description,
     .sap-solution-description,
-    .sap-shared-description {
+    .sap-shared-description,
+    .inteligencia-description {
         display: none;
         color: #373737;
         text-wrap: wrap;
@@ -517,6 +577,7 @@ input[type="number"] {
     .ciberseguridad:hover span,
     .consultoria:hover span,
     .sap-solution:hover span,
+    .inteligencia:hover span,
     .sap-shared:hover span{
         background-color: #104DE5;
     }
@@ -532,7 +593,8 @@ input[type="number"] {
     .ciberseguridad:hover .ciberseguridad-description.hidden-mb,
     .consultoria:hover .consultoria-description,
     .sap-solution:hover .sap-solution-description,
-    .sap-shared:hover .sap-shared-description {
+    .sap-shared:hover .sap-shared-description,
+    .inteligencia:hover .inteligencia-description {
         display: block;     
         max-width: 350px;   
     }
@@ -786,7 +848,22 @@ input[type="number"] {
         justify-content: center;
         align-items: center;
         gap: 45px;
-        margin-top: 25px;
+        margin: 25px auto;
+        max-width: 800px;
+        flex-wrap: wrap;
+
+        .partner-cli {
+            width: 220px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .accenture {
+            position: relative;
+            top: -15px;
+        }
     }
 }
 
@@ -1486,7 +1563,8 @@ input[type="number"] {
     .ciberseguridad,
     .consultoria,
     .sap-solution,
-    .sap-shared {
+    .sap-shared,
+    .inteligencia {
         pointer-events: none;
     }    
 }

@@ -104,12 +104,55 @@ input[type="number"] {
         ul li a:hover {
             font-weight: 700;
         }   
+        .language-select {
+            position: relative;
+            width: fit-content;
+            cursor: pointer;
+            margin-left: 60px;
+
+            .selected {
+                display: flex;
+                gap: 12px;
+                font-size: 20px;
+                align-items: center;
+            }
+
+            .options {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: -30px;
+                width: 130px;
+                background-color: #FAFAFA;
+                border: 1px solid #104DE5;
+                max-height: 150px;
+                overflow-y: visible;
+                z-index: 1000;
+                margin: 0;
+                margin-top: 20px;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;;
+
+                li {
+                    color: #104DE5;
+                    font-size: 20px;
+                }
+
+                li:hover {
+                    font-weight: bold;
+                }
+            }
+        }
+
 
         .country-select {
             position: relative;
             width: fit-content;
             cursor: pointer;
-            margin-left: 60px;
+            margin-left: 20px;
         }
         
         .country-select .selected {
@@ -195,6 +238,22 @@ input[type="number"] {
 
                 img {
                     width: 64px;
+                }
+            }
+            .language-select {
+                margin-left: 130px;
+    
+                .selected {
+                    display: flex;
+                    gap: 12px;
+                    font-size: 16px;
+                    align-items: center;
+                }
+    
+                .options {
+                    left: -10px;
+                    width: 90px;                   
+                    margin-top: 5px;                    
                 }
             }
         }
@@ -490,7 +549,8 @@ input[type="number"] {
     .ciberseguridad-description,
     .consultoria-description,
     .sap-solution-description,
-    .sap-shared-description {
+    .sap-shared-description,
+    .inteligencia-description {
         display: none;
         color: #373737;
         text-wrap: wrap;
@@ -514,6 +574,7 @@ input[type="number"] {
     .ciberseguridad:hover span,
     .consultoria:hover span,
     .sap-solution:hover span,
+    .inteligencia:hover span,
     .sap-shared:hover span{
         background-color: #104DE5;
     }
@@ -529,7 +590,8 @@ input[type="number"] {
     .ciberseguridad:hover .ciberseguridad-description.hidden-mb,
     .consultoria:hover .consultoria-description,
     .sap-solution:hover .sap-solution-description,
-    .sap-shared:hover .sap-shared-description {
+    .sap-shared:hover .sap-shared-description,
+    .inteligencia:hover .inteligencia-description {
         display: block; 
         max-width: 350px;       
     }
@@ -717,6 +779,210 @@ input[type="number"] {
             height: 190px;
             margin-top: 70px;
         }
+    }
+}
+.clientes {
+    background-color: #010101;
+    margin-top: -70px;
+    padding: 50px;
+
+    .paragraph {
+        font-size: 26px;
+        color: #FAFAFA;
+        margin: auto;
+        text-align: center;
+        max-width: 700px;
+        padding: 20px;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    .slider {
+        position: relative;
+        width: 100%;                
+        overflow: hidden;
+        
+        .slider-mobile {
+            display: none !important;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+
+            .slide {
+                min-width: 100%;
+                height: 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-size: cover;
+                background-position: center;
+            }
+            
+            .icons {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+    
+            .icons .icon {
+                width: 280px;
+                height: 280px;
+                margin: 0px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            
+        }
+        .dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;            
+        }
+
+        .dot {
+            width: 15px;
+            height: 15px;
+            margin: 0 5px;
+            background-color: #949494;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #104DE5;
+            width: 30px;
+            border-radius: 50px;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 35%;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            user-select: none;
+            background-image: url(../img/arrow.png);
+            background-size: contain;
+            z-index: 999;
+        }
+        
+        .arrow.left {
+            left: 40px;
+            transform: rotate(180deg);
+        }
+
+        .arrow.right {
+            right: 40px;
+        }
+
+        .arrow:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    }
+
+    
+}
+
+@media (max-width: 768px) {
+    
+    .clientes {
+        padding: 20px;
+
+        .paragraph {
+            font-size: 15px;
+        }
+
+        .slider {
+            margin-top: 20px;
+
+            .slider-mobile {
+                display: flex !important;
+
+                .slide {
+                    display: flex;
+                    align-items: center;
+                    height: fit-content;
+                    margin: 70px auto;
+                    
+                    .icons {
+
+                        .icon {
+                            width: 150px;
+                            height: 60px;
+                            margin: 0 auto;
+                            border-radius: 0;
+                        }
+
+                        .align-mobile {
+                            position: relative;
+                            left: 60px;
+                        }
+                    }
+                }
+            }
+
+            .dots {
+                margin-top: 60px;
+            }
+
+            .arrow.right {
+                top: 180px;
+                right: 0px;
+            }
+
+            .arrow.left {
+                top: 158px;
+                left: 0px;
+            }
+        }
+    }    
+}
+
+.bg-slide-1,
+.bg-slide-2 {
+    background-image: url(../img/bg-slider-1.png);
+    height: 100px;
+    width: 100%;
+    background-size: contain;
+    background-color: #010101;
+    position: relative;
+    top: -10px;
+    margin-bottom: -10px;
+} 
+
+.bg-slide-2 {
+    background-image: url(../img/bg-slider-2.png);
+    background-size: cover;
+}
+
+@media (max-width: 768px) {
+    .bg-slide-1,
+    .bg-slide-2 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 50px;
+        top: 0px;
     }
 }
 
@@ -1387,7 +1653,8 @@ input[type="number"] {
     .ciberseguridad,
     .consultoria,
     .sap-solution,
-    .sap-shared {
+    .sap-shared,
+    .inteligencia {
         pointer-events: none;
     }    
 }

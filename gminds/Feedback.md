@@ -33,3 +33,12 @@ MOBILE
 ----- Agrandar footer y chequear logo footer
 
 
+RESUMEN AJUSTES 10/3/25:
+Versión en Inglés de todos los países (icono EN/ESP) --- icono acceso listo
+---- Arg
+---- Col
+Chi
+----- Sumar como servicio nuevo: Inteligencia Artificial
+----- Sumar cliente Accenture en ARG, CH y COL: https://www.accenture.com/ar-es
+----- Agregar la seccion de Clientes y Partners en CH
+----- Sumar partner Buckman en ARG: https://www.buckman.com/
