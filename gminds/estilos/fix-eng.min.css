@@ -17,4 +17,13 @@
   background-image: url(../img/bg-grid-servicios-eng.png);
 }
 
+@media (max-width: 768px) {
+  .clientes .slider .dots {
+    margin-top: 0;
+  }
+  .bg-slide-1 {
+    background-image: url(../img/bg-slider-1-eng-mb.png);
+  }
+}
+
 /*# sourceMappingURL=fix-eng.min.css.map */
