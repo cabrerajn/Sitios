@@ -9,9 +9,12 @@
 
 .bg-slide-1 {
   background-image: url(../img/bg-slider-1-eng.png);
+  background-size: cover;
+  background-position-y: -10px;
 }
 
-.bg-clientes {
-  background-image: url(../img/bg-clientes-co-eng.png);
+.servicios .grid-container {
+  background-image: url(../img/bg-grid-servicios-eng.png);
 }
+
 /*# sourceMappingURL=fix-eng.min.css.map */
