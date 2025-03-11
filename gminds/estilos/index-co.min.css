@@ -717,7 +717,7 @@ input[type=number] {
 .clientes {
   background-color: #010101;
   margin-top: -70px;
-  padding: 100px;
+  padding: 100px 100px 10px;
 }
 .clientes .paragraph {
   font-size: 26px;
@@ -750,15 +750,33 @@ input[type=number] {
   top: -15px;
 }
 
-.bg-clientes {
-  background-image: url(../img/bg-clientes-co.png);
+.bg-slide-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.bg-slide {
+  width: 100%;
+  overflow: hidden;
+  font-size: 37px;
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  color: #104DE5;
   background-color: #010101;
-  height: 90px;
+}
+
+.bg-slide-1::after {
+  content: "Clientes_Partners_Clientes_Partners_Clientes_Partners_Clientes_Partners_Clientes_Partners_Clientes_Partners_Clientes_Partners_Clientes_Partners_";
+}
+
+.bg-slide:nth-child(2) { /* Aplica solo a la segunda línea */
+  text-indent: -50px;
 }
 
 @media (max-width: 768px) {
   .clientes {
-    padding: 20px;
+    padding: 20px 20px 1px;
   }
   .clientes .paragraph {
     font-size: 15px;
@@ -767,13 +785,14 @@ input[type=number] {
     flex-direction: column;
     gap: 0;
   }
-  .bg-clientes {
-    background-image: url(../img/bg-clientes-co-mb.png);
-    height: 105px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: relative;
-    top: -15px;
+  .clientes .contenedor-logos .partner-cli {
+    width: fit-content;
+  }
+  .clientes .contenedor-logos .partner-cli img {
+    max-width: fit-content;
+  }
+  .bg-slide {
+    font-size: 23px;
   }
 }
 .locations {

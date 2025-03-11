@@ -308,7 +308,10 @@
                     </div>                    
                 </div>                
             </section>
-            <div class="bg-slide bg-slide-1"></div><!--Background zócalo del slider de clientes-->
+            <div class="bg-slide-container">
+                <div class="bg-slide bg-slide-1"></div>
+                <div class="bg-slide bg-slide-1"></div>
+            </div>
             <section class="locations">
                 <div class="contenedor">
                     <img src="./img/mundo.png" alt="Mapa del mundo" class="imagen-mundo hidden-mb"> 
@@ -470,7 +473,7 @@
                 if (!slidesContainer) return;
                 const slides = slidesContainer.querySelectorAll('.slide');
                 const dots = document.querySelectorAll('.dot');
-                const bgslide = document.querySelector('.bg-slide');
+                const bgslide = document.querySelectorAll('.bg-slide');
                 const totalSlides = slides.length;
                 currentSlideIndex += step;
                 if (currentSlideIndex < 0) {
@@ -485,15 +488,17 @@
                 const slidesContainer = getVisibleSlider();
                 if (!slidesContainer) return;
                 const dots = document.querySelectorAll('.dot');
-                const bgslide = document.querySelector('.bg-slide');
+                const bgslide = document.querySelectorAll('.bg-slide');
                 currentSlideIndex = index;
                 updateSlider(slidesContainer, dots, bgslide, currentSlideIndex);
             }
 
             function updateSlider(slidesContainer, dots, bgslide, index) {
-                slidesContainer.style.transform = `translateX(-${index * 100}%)`;
-                bgslide.classList.toggle('bg-slide-1', index === 0);
-                bgslide.classList.toggle('bg-slide-2', index === 1);
+                slidesContainer.style.transform = `translateX(-${index * 100}%)`;    
+                bgslide.forEach(bgslide => {
+                    bgslide.classList.toggle('bg-slide-1', index === 0);
+                    bgslide.classList.toggle('bg-slide-2', index === 1);
+                });
                 dots.forEach(dot => dot.classList.remove('active'));
                 dots[index].classList.add('active');
             }

@@ -905,6 +905,7 @@ input[type="number"] {
     
 }
 
+
 @media (max-width: 768px) {
     
     .clientes {
@@ -960,30 +961,33 @@ input[type="number"] {
     }    
 }
 
-.bg-slide-1,
-.bg-slide-2 {
-    background-image: url(../img/bg-slider-1.png);
-    height: 100px;
+.bg-slide-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.bg-slide {
     width: 100%;
-    background-size: contain;
+    overflow: hidden;
+    font-size: 37px;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    color: #104DE5;
     background-color: #010101;
-    position: relative;
-    top: -10px;
-    margin-bottom: -10px;
 } 
 
-.bg-slide-2 {
-    background-image: url(../img/bg-slider-2.png);
-    background-size: cover;
+.bg-slide-1::after {
+    content: "Clientes_Clientes_Clientes_Clientes_Clientes_Clientes_Clientes_Clientes_Clientes_Clientes_Clientes_Clientes_Clientes_";
+}
+
+.bg-slide:nth-child(2) { /* Aplica solo a la segunda línea */
+    text-indent: -50px;
 }
 
 @media (max-width: 768px) {
-    .bg-slide-1,
-    .bg-slide-2 {
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 50px;
-        top: 0px;
+    .bg-slide {
+        font-size: 23px;
     }
 }
 
