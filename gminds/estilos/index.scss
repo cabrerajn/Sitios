@@ -941,6 +941,12 @@ input[type="number"] {
                             left: 60px;
                         }
                     }
+
+                    .grid-template {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        margin: auto;
+                    }
                 }
             }
 
@@ -964,6 +970,7 @@ input[type="number"] {
 .bg-slide-container {
     display: flex;
     flex-direction: column;
+    margin-top: -2px;
 }
 
 .bg-slide {

@@ -735,6 +735,10 @@ input[type=number] {
 .clientes .slider .slides .icons .icon img {
   width: 100%;
 }
+.clientes .slider .slides .icons .icon img.accenture {
+  position: relative;
+  top: -10px;
+}
 .clientes .slider .dots {
   display: flex;
   justify-content: center;
@@ -800,7 +804,10 @@ input[type=number] {
     display: flex;
     align-items: center;
     height: fit-content;
-    margin: 70px auto;
+    margin: 50px auto;
+  }
+  .clientes .slider .slider-mobile .slide .icons {
+    flex-direction: column;
   }
   .clientes .slider .slider-mobile .slide .icons .icon {
     width: 150px;
@@ -827,6 +834,7 @@ input[type=number] {
 .bg-slide-container {
   display: flex;
   flex-direction: column;
+  margin-top: -2px;
 }
 
 .bg-slide {
@@ -841,7 +849,7 @@ input[type=number] {
 }
 
 .bg-slide-1::after {
-  content: "Clientes_Clientes_Clientes_Clientes_Clientes_Clientes_Clientes_Clientes_Clientes_Clientes_Clientes_Clientes_Clientes_";
+  content: "Clientes_Partners_Clientes_Partners_Clientes_Partners_Clientes_Partners_Clientes_Partners_Clientes_Partners_Clientes_Partners_Clientes_Partners_";
 }
 
 .bg-slide:nth-child(2) { /* Aplica solo a la segunda línea */

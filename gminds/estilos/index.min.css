@@ -809,6 +809,11 @@ input[type=number] {
     position: relative;
     left: 60px;
   }
+  .clientes .slider .slider-mobile .slide .grid-template {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+  }
   .clientes .slider .dots {
     margin-top: 60px;
   }
@@ -824,6 +829,7 @@ input[type=number] {
 .bg-slide-container {
   display: flex;
   flex-direction: column;
+  margin-top: -2px;
 }
 
 .bg-slide {

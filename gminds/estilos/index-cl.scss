@@ -843,6 +843,11 @@ input[type="number"] {
                 img {
                     width: 100%;
                 }
+
+                img.accenture {
+                    position: relative;
+                    top: -10px;
+                }
             }
 
             
@@ -925,9 +930,10 @@ input[type="number"] {
                     display: flex;
                     align-items: center;
                     height: fit-content;
-                    margin: 70px auto;
+                    margin: 50px auto;
                     
                     .icons {
+                        flex-direction: column;
 
                         .icon {
                             width: 150px;
@@ -964,6 +970,7 @@ input[type="number"] {
 .bg-slide-container {
     display: flex;
     flex-direction: column;
+    margin-top: -2px;
 }
 
 .bg-slide {
@@ -978,7 +985,7 @@ input[type="number"] {
 } 
 
 .bg-slide-1::after {
-    content: "Clientes_Clientes_Clientes_Clientes_Clientes_Clientes_Clientes_Clientes_Clientes_Clientes_Clientes_Clientes_Clientes_";
+    content: "Clientes_Partners_Clientes_Partners_Clientes_Partners_Clientes_Partners_Clientes_Partners_Clientes_Partners_Clientes_Partners_Clientes_Partners_";
 }
 
 .bg-slide:nth-child(2) { /* Aplica solo a la segunda línea */

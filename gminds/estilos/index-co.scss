@@ -848,7 +848,7 @@ input[type="number"] {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 45px;
+        gap: 0px 30px;
         margin: 25px auto;
         max-width: 800px;
         flex-wrap: wrap;
@@ -901,8 +901,12 @@ input[type="number"] {
         }
 
         .contenedor-logos {
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin: auto;
+            margin-bottom: 50px;
             gap: 0;
+            justify-items: center;
 
             .partner-cli {
 
@@ -912,10 +916,14 @@ input[type="number"] {
                     max-width: fit-content;
                 }
             }
+            .accenture {
+                top: 0px;
+            }
         }
     }
     .bg-slide {
         font-size: 23px;
+        margin-top: -5px;
     }
 }
 
