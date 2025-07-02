@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+    <head>
+        <link rel="stylesheet" href="estilos/index-cl.min.css">     
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="cache-control" content="max-age=0">
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta http-equiv="expires" content="0">
+        <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT">
+        <meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="Description" content="Consultores especializados en la Plataforma de Servicios SAP Solution Manager." />
+		<meta name="Keywords" content="g-minds,SAP Solution Manager, focused build, focused run, focused insight, focused solutions, SAP Cloud ALM, SOLMAN, Activate, ITIL, CRM, Request Management, BPM, BPMN, Run SAP, Test, Process Management, ITPPM, PPM, ITSM, Best Practices, Project Management, Diagrama, Proceso, End to End, E2E, Metodología, Solución, Branch, Escenario, PI, BI, S/4, HANA, Fiori, Modelado de procesos, Monitoring, Consultoría, Consultor, Consulting, Gestión, Basis, TDMS, GRC, Focused Build, Focused Insights, Focused Run, Focused Solutions, ABAP, Factory, Activate, IA, ITSM, Agile" />
+        <meta property="og:title" content="G-Minds. Consultores SAP" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://www.g-minds.cl/" />
+		<meta property="og:description" content="Consultores especializados en la Plataforma de Servicios SAP Solution Manager." />
+        <title>G-Minds - Servicios de consultoría SAP/Expertos SAP Solution Manager</title>                       
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" as="style" onload="this.rel='stylesheet'">        
+        <link rel="preload" as="image" href="img/bg-quienes-somos-mb.png" media="(min-width: 360px)" crossorigin />
+        <link rel="preload" as="image" href="img/bg-quienes-somos.png" media="(min-width: 1024px)" crossorigin />
+        <link rel="preload" as="image" href="img/bg-servicios.gif" crossorigin />        
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">         
+    </head>
+    <body>
+        <main>
+            <section id="navbar" class="navbar">
+                <div class="container">
+                    <div class="logo"><img src="./img/logo-navbar.png" alt="Logo G-Minds"></div>
+                    <ul class="hidden-mb">
+                        <li><a href="#quienes-somos">Quiénes somos</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#staff">Staff</a></li> 
+                        <li><a href="#clientes">Clientes y partners</a></li>                      
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                    <div class="language-select">
+                        <div class="selected">
+                            <img src="./img/icono-lenguaje.png" alt="Español"> ESP 
+                        </div>
+                        <ul class="options">
+                            <li data-value="esp" data-url="https://www.g-minds.cl">
+                                Español
+                            </li>
+                            <li data-value="eng" data-url="https://www.g-minds.cl/index-chi-eng.html">
+                                English
+                            </li>                                                  
+                        </ul>
+                    </div> 
+                    <div class="country-select hidden-mb">
+                        <div class="selected">
+                            <img src="./img/flag-chile.png" alt="Chile"> CH <img class="dropdown" src="./img/flecha-dropdown.png">
+                        </div>
+                        <ul class="options">
+                            <li data-value="ch" data-url="https://www.g-minds.cl">
+                                <img src="./img/flag-chile.png" alt="Chile"> CH <img class="dropdown" src="./img/flecha-dropdown.png">
+                            </li>
+                            <li data-value="arg" data-url="https://www.g-minds.com.ar">
+                                <img src="./img/flag-argentina.png" alt="Argentina"> ARG <img class="dropdown" src="./img/flecha-dropdown.png">
+                            </li>                            
+                            <li data-value="col" data-url="https://www.g-minds.co">
+                                <img src="./img/flag-colombia.png" alt="Colombia"> COL <img class="dropdown" src="./img/flecha-dropdown.png">
+                            </li>
+                        </ul>
+                    </div>     
+                    <div class="hamburger" onclick="toggleMenu()">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>               
+                </div>
+            </section>
+            <!-- Menú Mobile -->
+            <div class="menu hidden-dk" id="menu">.
+                <div class="selector-pais-mb">
+                    <div class="pais-menu-mb active"><a href="#"><img src="./img/flag-chile-location.png" alt="CHILE"> CH</a></div>
+                    <div class="pais-menu-mb"><a href="https://www.g-minds.com.ar"><img src="./img/flag-argentina-location.png" alt="ARGENTINA"> ARG</a></div>
+                    <div class="pais-menu-mb"><a href="https://www.g-minds.co"><img src="./img/flag-colombia-location.png" alt="COLOMBIA"> COL</a></div>
+                </div>
+                <a href="#quienes-somos" class="menu-option">
+                    Quiénes somos
+                    <img src="./img/chevron-mobile.png">
+                </a>
+                <a href="#servicios" class="menu-option">
+                    Servicios
+                    <img src="./img/chevron-mobile.png">
+                </a>
+                <a href="#staff" class="menu-option">
+                    Staff
+                    <img src="./img/chevron-mobile.png">
+                </a>    
+                <a href="#clientes" class="menu-option">
+                    Clientes y partners
+                    <img src="./img/chevron-mobile.png">
+                </a>           
+                <a href="#contacto" class="menu-option">
+                    Contacto
+                    <img src="./img/chevron-mobile.png">
+                </a>
+            </div>
+            <section id="main-banner" class="main-banner">
+                <div class="encabezado"><h1>G-MINDS continúa <br>generando valor</h1></div>
+                <div class="bajada">Creciendo junto a usted, brindando soluciones <br> de calidad y generando nuevos servicios para <br>satisfacer las necesidades de su empresa.</div>
+            </section>
+            <section id="quienes-somos" class="quienes-somos">
+                <div class="container-1">
+                    <div class="content-left">
+                        <div class="paragraph">En <span class="azul">G-Minds</span> brindamos <span class="underline"> *servicios</span> SAP desde el año 2008.</div>
+                        <div class="aclaracion">*Desde 2024, sumamos servicios No-SAP, mejorando nuestro portfolio.</div>
+                    </div>
+                    <div class="content-right">
+                        <div class="texto-main">Armamos los mejores equipos, con altos valores personales y profesionales para poder brindar soluciones de calidad a nuestros clientes.</div>
+                        <div class="pie-texto">LOS VALORES SUSTENTAN NUESTRO TRABAJO</div>
+                    </div>
+                </div>
+            </section>
+            <section id="servicios" class="servicios">
+                <div class="service-description">Brindamos servicios diferenciales de soluciones SAP y No-SAP. Consultoría, tecnología y<br class="hidden-mb"> outsorcing de primer nivel.</div>
+                <div class="grid-container">
+                    <!-- Fila 1 -->
+                    <div class="grid-item full-stack">
+                        <span>FULL STACK</span>
+                        <span>TEAM</span>
+                        <div class="full-stack-description hidden-mb">Desde la concepción de un desarrollo, app o integración, hasta su implementación y soporte.</div>
+                    </div>
+                    <div class="grid-item soporte-sap">
+                        <span>SOPORTE SAP</span>
+                        <span>AMS</span>
+                        <div class="soporte-sap-description hidden-mb">Realice el mantenimiento de sus aplicaciones con nuestro equipo AMS.</div>
+                    </div>
+                    <div class="grid-item sap-basis">
+                        <span>SAP BASIS</span>
+                        <div class="sap-basis-description hidden-mb">Opere, monitoree y actualice sus sistemas SAP.</div>
+                    </div>
+                    <div class="grid-item factory-abap">
+                        <span>FACTORY ABAP</span>
+                        <span>+ FIORI + BTP</span>
+                        <div class="factory-abap-description hidden-mb">Lleve sus desarrollos, ampliaciones, integraciones y mejoras al próximo nivel.</div>                        
+                    </div>
+            
+                    <!-- Fila 2 -->
+                    <div class="grid-item consultoria-sap">
+                        <span>CONSULTORÍA SAP</span>
+                        <span>PI PO & CPI</span>
+                        <div class="consultoria-sap-description hidden-mb">Gestione todas las integraciones con nuestros servicios y especialistas.</div>
+                    </div>
+                    <div class="grid-item sap-cloud">
+                        <span>SAP CLOUD</span>
+                        <span>ALM</span>
+                        <div class="sap-cloud-description hidden-mb">Gestione y opere sus soluciones Cloud con la plataforma de servicios más potente para sus sistemas SAP.</div>
+                    </div>
+                    <div class="grid-item sap-security mtop">
+                        <span>SAP SECURITY</span>
+                        <span>& SAP GRC</span>
+                        <div class="sap-security-description hidden-mb">Aumente la efectividad de su seguridad y potencie su GRC.</div>
+                    </div>
+                    <div class="grid-item capacitacion mtop">
+                        <span>CAPACITACIÓN</span>
+                        <div class="capacitacion-description hidden-mb">Si su empresa necesita capacitación a medida, realizamos el armado de temarios, material, cronograma, dictado de cursos.</div>
+                    </div>
+            
+                    <!-- Fila 3 -->
+                    <div class="grid-item ciberseguridad">
+                        <span>CIBERSEGURIDAD</span>
+                        <div class="ciberseguridad-description hidden-mb">Amplíe sus fronteras en la seguridad, desde la concientización, desarrollo y aplicación de los niveles de seguridad.</div>
+                    </div>
+                    <div class="grid-item consultoria">
+                        <span>CONSULTORÍA</span>
+                        <span>FUNCIONAL SAP</span>
+                        <div class="consultoria-description hidden-mb">Implemente y optimice sus aplicaciones funcionales de la mano de nuestros consultores especializados.</div>
+                    </div>
+                    <div class="grid-item sap-solution">
+                        <span>SAP SOLUTION MANAGER</span>
+                        <span>& FOCUSED SOLUTIONS</span>
+                        <div class="sap-solution-description hidden-mb">Gestione el ciclo de vida de sus aplicaciones On Premis e híbridas con la plataforma de servicios más robusta.</div>
+                    </div>
+                    <div class="grid-item inteligencia">
+                        <span>INTELIGENCIA</span>
+                        <span>ARTIFICIAL</span>
+                        <div class="inteligencia-description hidden-mb">En un mundo cada vez más competitivo, la IA es la clave para transformar su negocio y llevarlo al siguiente nivel.</div>
+                    </div>
+                </div>
+            </section>
+            <section id="staff" class="staff">
+                <div class="container">
+                    <div class="member">
+                        <img src="./img/aldo_ortiz-cl.png" alt="Aldo Ortiz">
+                        <div class="description">
+                            <span>_Aldo Ortiz</span>
+                            <div>CEO</div>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="./img/pablo_pizzuto-cl.png" alt="Pablo Pizzuto">
+                        <div class="description">
+                            <span>_Pablo Pizzuto</span>
+                            <div class="font22">DM</div>
+                        </div>
+                    </div>                   
+                </div>
+                <div class="bg-staff"></div>
+            </section>
+            <section id="clientes" class="clientes">
+                <div class="paragraph">Ellos son algunos de los que <span>confían en nuestra propuesta</span> y con quienes superamos día a día nuevos desafíos.</div>
+                <div class="paragraph">Quienes nos suman para, conjuntamente, llevar valor agregado a sus proyectos.</div>
+                <div class="slider">
+                    <div class="hidden-mb">
+                        <div class="slides"> <!--SLIDER CLIENTES Y PARTNERS VERSIÓN DESKTOP-->
+                            <!-- First Slide -->
+                            <div class="slide">
+                                <div class="icons">
+                                  <div class="icon"><a href="https://www.accenture.com/ar-es" target="_blank"><img class="accenture" src="./img/cli-accenture.png" alt="Accenture"></a></div>
+                                  <div class="icon"><a href="https://www.witbor.com/" target="_blank"><img src="./img/par-witbor.png" alt="Witbor"></a></div>
+                                </div>                               
+                            </div>
+                            <!-- Second Slide -->                            
+                        </div>
+                    </div>
+                    <div class="hidden-dk">
+                        <div class="slides slider-mobile"><!--SLIDER CLIENTES Y PARTNERS VERSIÓN MOBILE-->
+                            <!-- First Slide -->
+                            <div class="slide">
+                                <div class="icons">
+                                    <div class="icon"><a href="https://www.accenture.com/ar-es" target="_blank"><img src="./img/cli-accenture-mb.png" alt="Accenture"></a></div>  
+                                    <div class="icon"><a href="https://www.witbor.com/" target="_blank"><img src="./img/par-witbor-mb.png" alt="Witbor"></a></div>                                  
+                                </div>                                
+                            </div>                            
+                        </div>
+                    </div>                                    
+                </div>                
+            </section>
+            <div class="bg-slide-container">
+                <div class="bg-slide bg-slide-1"></div>
+                <div class="bg-slide bg-slide-1"></div>
+            </div>
+            <section class="locations">
+                <div class="contenedor">
+                    <img src="./img/mundo.png" alt="Mapa del mundo" class="imagen-mundo hidden-mb"> 
+                    <div class="argentina">
+                        <div class="argentina-description">
+                            <span class="pais">
+                                <img src="./img/flag-argentina-location.png" alt="Argentina">
+                                <span>ARG</span>
+                            </span>
+                            <span class="since">Buenos Aires</span>
+                        </div>
+                    </div>
+                    <div class="chile">
+                        <div class="chile-description">
+                            <span class="pais">
+                                <img src="./img/flag-chile-location.png" alt="Chile">
+                                <span>CH</span>
+                            </span>
+                            <span class="since">Santiago de Chile</span>
+                        </div>
+                    </div>
+                    <div class="colombia">
+                        <div class="colombia-description">
+                            <span class="pais">
+                                <img src="./img/flag-colombia-location.png" alt="Colombia">
+                                <span>COL</span>
+                            </span>
+                            <span class="since">Bogotá</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contacto" class="contacto">
+                <div class="container hidden-mb">
+                    <div class="info-contacto">
+                        <div class="title">CONTÁCTANOS</div>
+                        <div class="contenedor">
+                            <div class="texto">Envíanos tu consulta y le responderemos pronto.</div>
+                            <div class="mail">
+                                <img src="./img/icono-mail.png" alt="Ícono correo electrónico"/>
+                                <div>
+                                    <div class="mail-direction"><a href="mailto:info@g-minds.cl" target="_blank">info@g-minds.cl</a></div>
+                                    <div class="mail-direction"><a href="mailto:administracion@g-minds.cl" target="_blank">administracion@g-minds.cl</a></div>
+                                </div>
+                            </div>
+                            <div class="ubicacion">
+                                <img src="./img/icono-ubicacion.png" alt="Ícono ubicación">
+                                <div>Almirante Pastene 185, Of. 405, <br> Providencia, Santiago de Chile</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formulario">
+                        <form id="contactForm">
+                            <div class="form-container">                                                       
+                                <div class="mensaje-exito"><img src="./img/check-form.png">¡Su consulta se envió con éxito!</div>
+                                <div class="mensaje-error"><img src="./img/error-form.png">Completa los campos obligatorios</div>   
+                                <div class="fila">
+                                    <input type="text" id="nombre" name="nombre" placeholder="Nombre*">
+                                    <input type="email" id="email" name="email" placeholder="Email*">
+                                </div>
+                                <div class="fila">
+                                    <input type="number" id="telefono" name="telefono" placeholder="Teléfono">
+                                    <input type="text" id="empresa" name="empresa" placeholder="Empresa">
+                                </div>
+                                <div class="fila ancho-fijo">
+                                    <input type="text" id="consulta" name="consulta" placeholder="Consulta*">
+                                    <input type="submit" value="Enviar" class="success button">
+                                </div>
+                                <div class="disclaimer">* Estos campos son obligatorios</div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="container hidden-dk">
+                    <div class="title">CONTÁCTANOS</div>
+                    <div class="bajada">Envíanos tu consulta y le responderemos pronto.</div>
+                    <div class="formulario">
+                        <form id="contactForm">
+                            <div class="form-container">                                                       
+                                <div class="mensaje-exito"><img src="./img/check-form.png">¡Su consulta se envió con éxito!</div>                                                  
+                                <div class="mensaje-error"><img src="./img/error-form.png">Completa los campos obligatorios</div>   
+                                <input type="text" id="nombre" name="nombre" placeholder="Nombre*">
+                                <input type="email" id="email" name="email" placeholder="Email*">
+                                <input type="number" id="telefono" name="telefono" placeholder="Teléfono">
+                                <input type="text" id="empresa" name="empresa" placeholder="Empresa">
+                                <input type="text" id="consulta" name="consulta" placeholder="Consulta*">
+                                <div class="disclaimer">* Estos campos son obligatorios</div>
+                                <input type="submit" value="Enviar" class="success button">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="datos-container">
+                        <div class="ubicacion">
+                            <img src="./img/icono-ubicacion.png" alt="Ícono ubicación">
+                            <div>Almirante Pastene 185, Of. 405,<br> Providencia, Santiago de Chile</div>
+                        </div>
+                        <div class="mail">
+                            <img src="./img/icono-mail.png" alt="Ícono correo electrónico"/>
+                            <div>
+                                <div class="mail-direction"><a href="mailto:info@g-minds.cl" target="_blank">info@g-minds.cl</a></div>
+                                <div class="mail-direction"><a href="mailto:administracion@g-minds.cl" target="_blank">administracion@g-minds.cl</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="footer">
+                <div class="logo"><img class="hidden-mb" src="./img/logo-gminds-footer.png" alt="G-MINDS"><img class="hidden-dk" src="./img/logo-gminds-footer-mb.png" alt="G-MINDS"></div>
+                <div class="texto">© G-MINDS 2024 / Todos los derechos reservados.</div>
+                <div class="redes">Encontranos en <a href="https://ar.linkedin.com/company/g-minds" target="_blank"><img class="hidden-mb" src="./img/logo-linkedin.png" alt="LinkedIn"><img class="hidden-dk" src="./img/logo-linkedin-mb.png" alt="LinkedIn"></a><a href="https://www.instagram.com/_gminds/" target="_blank"><img class="hidden-mb" src="./img/logo-ig.png" alt="Instagram"><img class="hidden-dk" src="./img/logo-ig-mb.png" alt="Instagram"></a></div>
+                <div class="navigation-top"><a href="#navbar"><img class="hidden-mb" src="./img/navigation-top.png" alt="Volver a arriba"><img class="hidden-dk" src="./img/navigation-top-mb.png" alt="Volver a arriba"></a></div>
+            </section>            
+        </main>
+
+        <script>/*Dropdown menu paises*/
+            document.querySelector('.country-select .selected').addEventListener('click', function() {
+                const optionsMenu = document.querySelector('.country-select .options');
+                optionsMenu.style.display = optionsMenu.style.display === 'none' || optionsMenu.style.display === '' ? 'flex' : 'none';
+            });
+            document.querySelectorAll('.country-select .options li').forEach(option => {
+                option.addEventListener('click', function() {
+                    const selected = document.querySelector('.country-select .selected');
+                    selected.innerHTML = this.innerHTML;
+                    document.querySelector('.country-select .options').style.display = 'none';
+                    window.location.href = this.getAttribute('data-url');
+                });
+            });
+        </script>   
+        <script>/*Dropdown menu lenguaje*/
+            document.querySelector('.language-select .selected').addEventListener('click', function() {
+                const optionsMenu = document.querySelector('.language-select .options');
+                optionsMenu.style.display = optionsMenu.style.display === 'none' || optionsMenu.style.display === '' ? 'flex' : 'none';
+            });
+            document.querySelectorAll('.language-select .options li').forEach(option => {
+                option.addEventListener('click', function() {
+                    const selected = document.querySelector('.language-select .selected');
+                    selected.innerHTML = this.innerHTML;
+                    document.querySelector('.language-select .options').style.display = 'none';
+                    window.location.href = this.getAttribute('data-url');
+                });
+            });
+        </script>        
+        <script>/* Menú Mobile */
+            function toggleMenu() {
+                const menu = document.getElementById('menu');
+                const hamburger = document.querySelector('.hamburger');
+                
+                // Alterna la clase 'active' tanto en el menú como en el ícono de la hamburguesa
+                menu.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            }
+            document.querySelectorAll('.menu-option').forEach(option => {
+                option.addEventListener('click', () => {
+                    const menu = document.getElementById('menu');
+                    const hamburger = document.querySelector('.hamburger');
+                    
+                    // Asegúrate de que el menú se cierre
+                    menu.classList.remove('active');
+                    hamburger.classList.remove('active');
+                });
+            });
+        </script>
+        <!-- /* Formulario */ -->
+        <script>
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                event.preventDefault(); 
+                const nombre = document.getElementById('nombre').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const consulta = document.getElementById('consulta').value.trim();
+                const formData = new FormData(this);  
+                let errorMensaje=0;
+                if (!nombre){
+                    document.getElementById('nombre').style.border='1px solid #3E1C1C'
+                    document.getElementsByClassName('mensaje-error')[0].style.display='flex'
+                    errorMensaje=1
+                }
+                else {
+                    document.getElementById('nombre').style.border='none'
+                }
+                if (!email) {
+                    document.getElementById('email').style.border='1px solid #3E1C1C'
+                    document.getElementsByClassName('mensaje-error')[0].style.display='flex'
+                    errorMensaje=1
+                }
+                else {
+                    document.getElementById('email').style.border='none'
+                }
+                if (!consulta) {
+                    document.getElementById('consulta').style.border='1px solid #3E1C1C'
+                    document.getElementsByClassName('mensaje-error')[0].style.display='flex'
+                    errorMensaje=1
+                }
+                else {
+                    document.getElementById('consulta').style.border='none'
+                }
+                if (errorMensaje!=1){
+                    fetch('email.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.text())
+                    .then(response => {
+                        if (response === "succes") {
+                            document.getElementById('contactForm').reset();
+                            document.getElementsByClassName('mensaje-exito')[0].style.display = 'flex';
+                            window.scrollTo({
+                                top: document.querySelector('.formulario').offsetTop,
+                                behavior: 'smooth'
+                            });
+                        } else {
+                            console.error('Error en el servidor:', response);
+                            document.getElementsByClassName('mensaje-error')[0].innerHTML = '<img src="./img/error-form.png" alt="Error"> Error al enviar el formulario intente más tarde'
+                            document.getElementsByClassName('mensaje-error')[0].style.display = 'flex'
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error al enviar el formulario:', error);
+                        document.getElementsByClassName('mensaje-error')[0].innerHTML = '<img src="./img/error-form.png" alt="Error"> Error al enviar el formulario intente más tarde'
+                        document.getElementsByClassName('mensaje-error')[0].style.display = 'flex'
+                    });
+                }
+            });
+        </script>
+        
+    </body>
+</html>
