@@ -1,0 +1,28 @@
+.quienes-somos .content-left .paragraph {
+  max-width: 700px;
+}
+
+.quienes-somos .content-right .pie-texto {
+  margin-top: 410px;
+  margin-left: -110px;
+}
+
+.bg-slide-1::after {
+  content: "Clients_Clients_Clients_Clients_Clients_Clients_Clients_Clients_Clients_Clients_Clients_Clients_Clients_Clients_";
+}
+
+.bg-slide-eng::after {
+  content: "Clients_Partners_Clients_Partners_Clients_Partners_Clients_Partners_Clients_Partners_Clients_Partners_Clients_Partners_";
+}
+
+.servicios .grid-container {
+  background-image: url(../img/bg-grid-servicios-eng.png);
+}
+
+@media (max-width: 768px) {
+  .clientes .slider .dots {
+    margin-top: 0;
+  }
+}
+
+/*# sourceMappingURL=fix-eng-test.min.css.map */
