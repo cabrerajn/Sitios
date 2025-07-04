@@ -103,9 +103,20 @@
                     <img src="./img/chevron-mobile.png">
                 </a>
             </div>
-            <section id="main-banner" class="main-banner">
-                <div class="encabezado"><h1>Continuamos<br>generando valor</h1></div>
-                <div class="bajada">Creciendo junto a usted, brindando <br class="hidden-dk"><b>soluciones <br class="hidden-mb"> de calidad</b> y generando <br class="hidden-dk"> nuevos servicios para <br class="hidden-mb">satisfacer las <br class="hidden-dk"> necesidades de su empresa.</div>
+            <section id="main-banner" class="slider-banner">
+                <div class="slide-banner active main-banner-1">
+                    <div class="encabezado"><h1>Continuamos<br>generando valor</h1></div>
+                    <div class="bajada">Creciendo junto a usted, brindando <br class="hidden-dk"><b>soluciones <br class="hidden-mb"> de calidad</b> y generando <br class="hidden-dk"> nuevos servicios para <br class="hidden-mb">satisfacer las <br class="hidden-dk"> necesidades de su empresa.</div>
+                </div>
+                <div class="slide-banner main-banner-2">
+                    <div class="encabezado hidden-mb">SOMOS<br> PARTE DE <img src="./img/logo-saia.png" alt="SAIA"></div>
+                    <div class="encabezado hidden-dk">SOMOS SOCIOS <br>DE <img src="./img/logo-saia-mb.png" alt="SAIA"></div>
+                    <div class="bajada">Nos unimos a SAIA para conectar y continuar con la revolución de la Inteligencia Artificial en Argentina.</div>
+                </div>
+                <div class="slider-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                </div>
             </section>
             <section id="quienes-somos" class="quienes-somos">
                 <div class="container-1">
@@ -461,6 +472,46 @@
                         document.getElementsByClassName('mensaje-error')[0].style.display = 'flex'
                     });
                 }
+            });
+        </script>
+        <!--Slider banner hero-->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const slides = document.querySelectorAll("#main-banner .slide-banner");
+                const dots = document.querySelectorAll(".slider-dots .dot");
+                let current = 0;
+                let interval;
+
+                function goToSlide(index) {
+                    slides[current].classList.remove("active");
+                    dots[current].classList.remove("active");
+                    current = index;
+                    slides[current].classList.add("active");
+                    dots[current].classList.add("active");
+                }
+
+                function nextSlide() {
+                    let next = (current + 1) % slides.length;
+                    goToSlide(next);
+                }
+
+                function startAutoSlide() {
+                    interval = setInterval(nextSlide, 4000);
+                }
+
+                function stopAutoSlide() {
+                    clearInterval(interval);
+                }
+
+                dots.forEach(dot => {
+                    dot.addEventListener("click", () => {
+                    stopAutoSlide();
+                    goToSlide(parseInt(dot.dataset.index));
+                    startAutoSlide();
+                    });
+                });
+
+                startAutoSlide();
             });
         </script>
         

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es-AR">
     <head>
-        <link rel="stylesheet" href="estilos/index-cl.min.css">   
-        <link rel="stylesheet" href="estilos/fix-eng.min.css">  
+        <link rel="stylesheet" href="estilos/index-cl-test.min.css">   
+        <link rel="stylesheet" href="estilos/fix-eng-test.min.css">  
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="cache-control" content="max-age=0">
@@ -104,9 +104,19 @@
                     <img src="./img/chevron-mobile.png">
                 </a>
             </div>
-            <section id="main-banner" class="main-banner">
-                <div class="encabezado"><h1>G-Minds continues <br>to generate value</h1></div>
-                <div class="bajada">Growing with you, providing quality solutions<br> and generating new services to meet the<br> needs of your company.</div>
+            <section id="main-banner" class="slider-banner">
+                <div class="slide-banner active main-banner-1">
+                    <div class="encabezado"><h1>We continue <br>generating value</h1></div>
+                    <div class="bajada">Growing with you, providing<br class="hidden-dk"> <b>quality solutions</b><br class="hidden-mb"> and generating<br class="hidden-dk"> new services to meet the<br class="hidden-mb"> needs of <br class="hidden-dk">your company.</div>
+                </div>
+                <div class="slide-banner main-banner-2">
+                    <div class="encabezado">WE ARE<br class="hidden-mb"> PART <br class="hidden-dk"> OF <img class="hidden-mb" src="./img/logo-saia.png" alt="SAIA"><img class="hidden-dk" src="./img/logo-saia-mb.png" alt="SAIA"></div>
+                    <div class="bajada">We've joined SAIA to connect and continue the Artificial Intelligence revolution in Argentina.</div>
+                </div>
+                <div class="slider-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                </div>
             </section>
             <section id="quienes-somos" class="quienes-somos">
                 <div class="container-1">
@@ -217,6 +227,7 @@
                                 <div class="icons">
                                   <div class="icon"><a href="https://www.accenture.com/ar-es" target="_blank"><img class="accenture" src="./img/cli-accenture.png" alt="Accenture"></a></div>
                                   <div class="icon"><a href="https://www.witbor.com/" target="_blank"><img src="./img/par-witbor.png" alt="Witbor"></a></div>
+                                  <div class="icon"><a href="https://www.directrelief.org/" target="_blank"><img src="./img/cli-directrelief.png" alt="Direct Relief"></a></div>
                                 </div>                               
                             </div>
                             <!-- Second Slide -->                            
@@ -229,6 +240,7 @@
                                 <div class="icons">
                                     <div class="icon"><a href="https://www.accenture.com/ar-es" target="_blank"><img src="./img/cli-accenture-mb.png" alt="Accenture"></a></div>   
                                     <div class="icon"><a href="https://www.witbor.com/" target="_blank"><img src="./img/par-witbor-mb.png" alt="Witbor"></a></div>                                 
+                                    <div class="icon"><a href="https://www.directrelief.org/" target="_blank"><img src="./img/cli-directrelief-mb.png" alt="Direct Relief"></a></div>                               
                                 </div>                                
                             </div>                            
                         </div>
@@ -460,6 +472,46 @@
                         document.getElementsByClassName('mensaje-error')[0].style.display = 'flex'
                     });
                 }
+            });
+        </script>
+        <!--Slider banner hero-->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const slides = document.querySelectorAll("#main-banner .slide-banner");
+                const dots = document.querySelectorAll(".slider-dots .dot");
+                let current = 0;
+                let interval;
+
+                function goToSlide(index) {
+                    slides[current].classList.remove("active");
+                    dots[current].classList.remove("active");
+                    current = index;
+                    slides[current].classList.add("active");
+                    dots[current].classList.add("active");
+                }
+
+                function nextSlide() {
+                    let next = (current + 1) % slides.length;
+                    goToSlide(next);
+                }
+
+                function startAutoSlide() {
+                    interval = setInterval(nextSlide, 4000);
+                }
+
+                function stopAutoSlide() {
+                    clearInterval(interval);
+                }
+
+                dots.forEach(dot => {
+                    dot.addEventListener("click", () => {
+                    stopAutoSlide();
+                    goToSlide(parseInt(dot.dataset.index));
+                    startAutoSlide();
+                    });
+                });
+
+                startAutoSlide();
             });
         </script>
         

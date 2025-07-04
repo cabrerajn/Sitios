@@ -19,9 +19,25 @@
   background-image: url(../img/bg-grid-servicios-eng.png);
 }
 
+.slider-banner .main-banner-2 {
+  background-image: url(../img/bg-main-banner-2-eng.png);
+}
+.slider-banner .main-banner-2 .bajada {
+  max-width: 530px;
+}
+
 @media (max-width: 768px) {
   .clientes .slider .dots {
     margin-top: 0;
+  }
+  .slider-banner .main-banner-2 {
+    background-image: url(../img/bg-main-banner-2-eng-mb.png);
+  }
+  .slider-banner .main-banner-2 .encabezado img {
+    display: inline;
+  }
+  .slider-banner .main-banner-2 .bajada {
+    padding: 0 45px;
   }
 }
 

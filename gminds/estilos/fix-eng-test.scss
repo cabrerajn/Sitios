@@ -19,10 +19,30 @@
     background-image: url(../img/bg-grid-servicios-eng.png);
 }
 
-  
+.slider-banner .main-banner-2 {
+    background-image: url(../img/bg-main-banner-2-eng.png);
+
+    .bajada {
+        max-width: 530px;
+    }
+}
+
 @media (max-width: 768px) {
     .clientes .slider .dots {
         margin-top: 0;
     }
-   
+    .slider-banner .main-banner-2 {
+        background-image: url(../img/bg-main-banner-2-eng-mb.png);
+
+        .encabezado {
+
+            img{
+                display: inline;
+            }
+        }
+
+        .bajada {
+            padding: 0 45px;
+        }
+    }
 }
