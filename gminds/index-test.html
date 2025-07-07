@@ -113,9 +113,9 @@
                     <div class="encabezado hidden-dk">SOMOS SOCIOS <br>DE <img src="./img/logo-saia-mb.png" alt="SAIA"></div>
                     <div class="bajada">Nos unimos a SAIA para conectar y continuar con la revolución de la Inteligencia Artificial en Argentina.</div>
                 </div>
-                <div class="slider-dots">
-                    <span class="dot active" data-index="0"></span>
-                    <span class="dot" data-index="1"></span>
+                <div class="slider-banner-dots">
+                    <span class="dot-banner active" data-index="0"></span>
+                    <span class="dot-banner" data-index="1"></span>
                 </div>
             </section>
             <!-- <section id="main-banner" class="main-banner">
@@ -608,7 +608,7 @@
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const slides = document.querySelectorAll("#main-banner .slide-banner");
-                const dots = document.querySelectorAll(".slider-dots .dot");
+                const dots = document.querySelectorAll(".slider-banner-dots .dot-banner");
                 let current = 0;
                 let interval;
 
@@ -642,8 +642,20 @@
                 });
 
                 startAutoSlide();
+                /*Navigation top*/
+                window.addEventListener('scroll', function () {
+                    const elemento = document.querySelector('.navigation-top');
+                    console.log(elemento)
+                    const posicion = elemento.getBoundingClientRect();
+
+                    if (posicion.top < window.innerHeight) {
+                        elemento.style.opacity = 1;
+                    } else {
+                        elemento.style.opacity = 0;
+                    }
+                });
             });
-        </script>
+        </script>     
         
     </body>
 </html>

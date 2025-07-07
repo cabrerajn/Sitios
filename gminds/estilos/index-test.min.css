@@ -398,7 +398,7 @@ input[type=number] {
   max-width: 580px;
   text-align: left;
 }
-.slider-banner .slider-dots {
+.slider-banner .slider-banner-dots {
   position: absolute;
   bottom: 20px;
   left: 50%;
@@ -407,7 +407,7 @@ input[type=number] {
   gap: 10px;
   z-index: 2;
 }
-.slider-banner .slider-dots .dot {
+.slider-banner .slider-banner-dots .dot-banner {
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -415,7 +415,7 @@ input[type=number] {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.slider-banner .slider-dots .dot.active {
+.slider-banner .slider-banner-dots .dot-banner.active {
   width: 28px;
   border-radius: 30px;
   background-color: #0056ff; /* Azul como en tu imagen */
@@ -1466,11 +1466,13 @@ input[type=number] {
 }
 .footer .navigation-top {
   position: fixed;
-  bottom: 140px;
+  top: 820px;
   right: 60px;
   width: 50px;
   height: 50px;
   cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
 @media (max-width: 768px) {
