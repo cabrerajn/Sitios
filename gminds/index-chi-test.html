@@ -514,8 +514,8 @@
                 startAutoSlide();
                 /*Navigation top*/
                 window.addEventListener('scroll', function () {
+                    if (window.innerWidth <= 768) return;
                     const elemento = document.querySelector('.navigation-top');
-                    console.log(elemento)
                     const posicion = elemento.getBoundingClientRect();
 
                     if (posicion.top < window.innerHeight) {

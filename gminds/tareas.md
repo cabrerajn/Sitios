@@ -1,4 +1,4 @@
-Tiempo: 5h
+Tiempo: 6h
 
 **ARGENTINA** ----------LISTO-------------
 1. Cambio banner home ------- LISTO
