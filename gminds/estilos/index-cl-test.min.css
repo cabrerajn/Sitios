@@ -345,7 +345,6 @@ input[type=number] {
   background-image: url(../img/bg-main-banner-1.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-y: -130px;
   color: #FAFAFA;
 }
 .slider-banner .main-banner-1 .encabezado {
@@ -424,7 +423,6 @@ input[type=number] {
   }
   .slider-banner .main-banner-1 {
     background-image: url(../img/bg-main-banner-1-mb.png);
-    background-position-y: -60px;
     height: 600px;
     background-size: 100%;
   }
