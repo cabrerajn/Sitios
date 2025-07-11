@@ -1,5 +1,5 @@
-Tiempo: 6h
-
+Tiempo: 7h
+Puesta en producción: 11/7/25
 **ARGENTINA** ----------LISTO-------------
 1. Cambio banner home ------- LISTO
 2. Slider banner segundo banner ---- LISTO

@@ -366,10 +366,12 @@ input[type="number"] {
 }
 
 .main-banner {
-    background-image: url(../img/bg-quienes-somos.png);
-    height: 800px;    
+    background-image: url(../img/bg-main-banner-1.png);
+    background-size: cover;
+    height: 730px;    
     background-repeat: no-repeat;    
     background-position-y: -130px;    
+    color: #FAFAFA;
 
     .encabezado {
         margin: auto;
@@ -381,7 +383,7 @@ input[type="number"] {
         h1 {
             margin: 0;
             line-height: .9;
-            font-size: 54px;
+            font-size: 105px;
         }
     }
 
@@ -389,15 +391,15 @@ input[type="number"] {
         margin: auto;
         width: fit-content;
         font-size: 26px;
-        margin-top: 30px;
+        margin-top: 50px;
         text-align: center;
     }
 }
 
 @media (max-width: 768px) {
     .main-banner {
-        background-image: url(../img/bg-quienes-somos-mb.png);
-        background-position: top;
+        background-image: url(../img/bg-main-banner-1-mb.png);
+        background-position-y: -60px;
         height: 600px;
         background-size: 100%;
 
@@ -457,7 +459,7 @@ input[type="number"] {
 
     .content-right {
         flex: 1;
-        background-image: url(../img/bg-servicios.gif);
+        background-image: url(../img/bg-quienes-somos-fija.png);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -1512,7 +1514,7 @@ input[type="number"] {
 
     .navigation-top {
         position: fixed;
-        bottom: 140px;
+        top: 820px;
         right: 60px;
         width: 50px;
         height: 50px;
